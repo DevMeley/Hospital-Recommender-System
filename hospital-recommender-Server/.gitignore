@@ -3,3 +3,4 @@ __pycache__/
 .env
 static/map_output.html
 static/*
+map_output.html

@@ -1,4 +1,4 @@
 Name,Full Address,Services,Cost Level,Quality Score,User Rating,City,Location_Match,Coordinates,Recommendation_Score,Route_Distance,Route_Duration,Route_Instructions
-Toun Memorial Specialist Hospital,"Ikorodu, Lagos","Multispecialty Care, Surgical Services",High,4,4.0,ikorodu,1.0,"(6.5244, 3.3792)",0.8498817784631205,,,N/A
-General Hospital Ikorodu,"T.O.S. Benson Road, Ikorodu, Lagos, Nigeria","Emergency, Maternity, Pediatrics, Cardiology, Orthopedics, Radiology, Blood Bank, Dental",Low,3,3.5,ikorodu,1.0,"(6.5244, 3.3792)",0.8498817784631205,,,N/A
-Aruna Ogun Memorial Specialist Hospital,"3/4 Bamimosu Street, Ebute, Ikorodu","Surgical Services, Pediatric Care",Medium,4,4.0,ikorodu,1.0,"(6.5244, 3.3792)",0.6555555555555557,,,N/A
+Active Health Managers Limited,"Dolphin Estate, Ikoyi",Corporate Health Management,High,4,4.2,ikoyi,1.0,"(6.5244, 3.3792)",0.19999573196756149,,,N/A
+Crest Consultant Clinic,"Keffi Street, Ikoyi",Specialist Medical Consultations,High,4,4.2,ikoyi,1.0,"(6.5244, 3.3792)",0.19999573196756149,,,N/A
+Diamondshield Health Services,Ikoyi,Corporate Healthcare Programs,High,4,4.3,ikoyi,1.0,"(6.5244, 3.3792)",0.19999573196756149,,,N/A
