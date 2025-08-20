@@ -1,0 +1,83 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  margin-bottom: 50px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 20px;
+  border-bottom: 2px solid rgb(66, 66, 66);
+}
+.inputs input,
+.inputs select {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  border: none;
+  width: 250px;
+}
+select {
+  width: 350px;
+  border: none;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 8px 16px rgba(182, 182, 182, 0.07);
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: rgb(197, 31, 212);
+}
+button:hover {
+  background-color: purple;
+}
+.inputs label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.left,
+.right-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+hr {
+  border: 1ps solid white;
+}
+.recommended {
+  border-bottom: 2px solid gray;
+}
+
+.option{
+  color: gray;
+}
+.error-message {
+  color: #fff;
+  background: #d32f2f;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin: 16px 0;
+  text-align: center;
+}

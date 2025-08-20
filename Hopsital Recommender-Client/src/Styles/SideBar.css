@@ -1,0 +1,21 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  flex: 1;
+  background-color: rgb(65, 65, 65);
+  height: 100vh;
+}
+
+.links p {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.links p:hover {
+  background-color: gray;
+}
+.links p:focus-visible {
+  background-color: gray;
+}

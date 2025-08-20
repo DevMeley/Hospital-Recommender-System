@@ -1,0 +1,100 @@
+.Home{
+  padding-top: 200px;
+  background-image: url("/assets/hospital-clinic-building-with-ambulance-car-truck/2645.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw; 
+  
+}
+.home-contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.welcome-txt{
+  background-color:  rgba(119, 119, 119, 0.7);
+padding: 16px;
+}
+.welcome-txt h1{
+  color: white;
+  /* color: rgb(15, 15, 15); */
+}
+.explore{
+  width: 200px;
+  font-size: 24px;
+  font-weight: 900;
+}
+.main-content {
+  display: flex;
+}
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  position: fixed;
+  background-color: rgb(24, 24, 24);
+  right: 0;
+  left: 0;
+}
+.Link{
+  color: white;
+}
+.Link:hover{
+  border-bottom: 2px solid white;
+}
+.Recommendation{
+  margin-left: 120px;
+  padding-top: 80px;
+}
+
+
+.Table {
+  width: 90%;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.Table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Table th, .Table td {
+  padding: 16px 18px;
+  text-align: left;
+  border: 1px solid rgb(197, 31, 212);
+}
+
+.Table th {
+  background: rgb(197, 46, 211);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.rec-btn{
+  background-color: rgb(214, 71, 214);
+  padding: 16px 16px;
+}
+
+.Recommendation h3 {
+  margin-top: 32px;
+  color: rgb(197, 31, 212);
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+img[alt="Loading..."] {
+  display: block;
+  margin: 40px auto;
+  width: 48px;
+  height: 48px;
+}
