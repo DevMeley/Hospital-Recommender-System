@@ -11,13 +11,16 @@ import re
 import polyline
 from datetime import datetime
 from jinja2 import Template
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # Setup logging
 logging.basicConfig(filename='hospital_recommender.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 # Initialize Google Maps client
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "YOUR_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
 
 # Default coordinates (Lagos center)

@@ -1,0 +1,114 @@
+2025-08-20 19:44:27,294 - INFO - API queries_quota: 60
+2025-08-20 19:58:06,923 - INFO - API queries_quota: 60
+2025-08-20 19:58:22,510 - INFO - API queries_quota: 60
+2025-08-20 20:02:16,988 - INFO - API queries_quota: 60
+2025-08-20 20:02:57,339 - INFO - API queries_quota: 60
+2025-08-20 20:03:47,337 - INFO - API queries_quota: 60
+2025-08-20 20:05:49,778 - INFO - API queries_quota: 60
+2025-08-20 20:05:54,044 - INFO - API queries_quota: 60
+2025-08-20 20:07:25,967 - INFO - API queries_quota: 60
+2025-08-20 20:11:15,852 - INFO - API queries_quota: 60
+2025-08-20 20:11:55,779 - INFO - API queries_quota: 60
+2025-08-20 20:13:28,604 - INFO - Loading dataset Lagos_hospital.csv
+2025-08-20 20:13:28,615 - INFO - User city extracted: ikorodu
+2025-08-20 20:13:28,621 - INFO - Unique hospital cities: ['lagos island' 'gbagada' 'surulere' 'iju' 'idimu' 'ikeja' 'ikoyi' 'ipaja'
+ 'bariga' 'jibowu' 'appa' 'ojo' 'ajangbadi' 'ijesatedo' 'victoria island'
+ 'ifako-ijaiye' 'apapa' 'ikorodu' 'unknown' 'lagos airport road' 'badagry'
+ 'ilupeju' 'yaba' 'agege' 'egbe' 'ogba' 'ajah' 'off alake' 'mushin'
+ 'okomalam' 'onipanu' 'akowonjo' 'egbeda' 'ketu' 'fagba' 'akoka'
+ 'mafoluku-oshodi' 'ebute metta' 'iba' 'festac town' 'agbado' 'shogunle'
+ 'obalende' 'okota' 'lekki' 'isolo' 'idi-araba' 'igbobi' 'oshodi-isolo'
+ 'alagbado' 'epe' 'shomolu' 'lagos mainland']
+2025-08-20 20:13:29,328 - ERROR - Geocoding error for 'Ikorodu': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:29,534 - ERROR - Geocoding error for '3/4 Bamimosu Street, Ebute, Ikorodu': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:29,733 - ERROR - Geocoding error for '26 Olaide Village, Ikorodu': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:30,071 - ERROR - Geocoding error for '9 Muniratu Aleje Street, Ikorodu': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:30,280 - ERROR - Geocoding error for 'Ikorodu Road': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:30,489 - ERROR - Geocoding error for 'Ikorodu, Lagos': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:30,714 - ERROR - Geocoding error for 'T.O.S. Benson Road, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:30,924 - ERROR - Geocoding error for '191 Lagos Road, Before Agric Bus Stop, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:31,125 - ERROR - Geocoding error for '59 Lagos Road, Newgate Bus Stop, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:31,325 - ERROR - Geocoding error for '1 Onafowokan Street, Opposite Mejabot Filling Station, Owutu, Agric, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:31,548 - ERROR - Geocoding error for '1 Shamsideen Jaiyesimi Street, Aga, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:31,760 - ERROR - Geocoding error for '56 Itokin Road, Otun Bus Stop, Lucky Fibre, Itamope, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:31,981 - ERROR - Geocoding error for 'Plot 12 Biovic Boulevard, Jajo Estate, Off Mowo-Nla Road, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:32,218 - ERROR - Geocoding error for '6 Ola Balogun Street, Behind LG Primary School, Igbe-Laara, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:32,439 - ERROR - Geocoding error for 'JGJC+6G, Ikorodu-Epe Rd, Akasolori, Ikorodu 104101, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:32,654 - ERROR - Geocoding error for '2/4 Bamimosu Street, Ebutte, Ipakodo, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:32,840 - ERROR - Geocoding error for '50 Eluku Street, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:33,339 - ERROR - Geocoding error for '5 Anibaba Street, Off Ireshe Road, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:33,623 - ERROR - Geocoding error for 'Simco Ummekwu Street, Off Isawo Road, Agric, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:33,812 - ERROR - Geocoding error for '5 Segun Ishola Street, Owutu, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:34,017 - ERROR - Geocoding error for '3-5 Adeyeri Owuyo Street, Behind Zenith Bank, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:34,206 - ERROR - Geocoding error for '5 Eunice Iyayi Street, Odogunyan, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:34,396 - ERROR - Geocoding error for 'Kilometers 3 Ikorodu-Shagamu Express Way, Ita-Oluwo, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:34,602 - ERROR - Geocoding error for 'Degolu Road, Igbogbo, 234001, Ikorodu, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:34,806 - ERROR - Geocoding error for '2nd Avenue, Poboyejo Estate, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:35,027 - ERROR - Geocoding error for '3 Fatima Bintu Street, Sholebo Estate, Off Ebute-Igbobo Road, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:35,231 - ERROR - Geocoding error for '3 Omo Oba Shibajo Way, Agbede Transformer, Ita Oluwo Road, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:35,439 - ERROR - Geocoding error for '120 Lagos Road, Haruna, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:35,640 - ERROR - Geocoding error for '77 Odonla Road, Odogunyan, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:35,847 - ERROR - Geocoding error for '180 Awolowo Way, Itamaga, Ikorodu, Lagos, Nigeria': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:13:36,315 - INFO - Exact match for "surgery" in ['surgical services', 'pediatric care']
+2025-08-20 20:13:36,356 - INFO - Hospital: Aruna Ogun Memorial Specialist Hospital, Service Match: 1.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 20:13:36,356 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 20:13:36,378 - INFO - Hospital: Baylight Watch Hospitals Ltd, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,378 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,378 - INFO - Hospital: Demola Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,378 - INFO - No match for "surgery" in ['general medicine', 'basic procedures']
+2025-08-20 20:13:36,378 - INFO - Hospital: Ikorodu Clinic, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,378 - INFO - No match for "surgery" in ['primary healthcare', 'basic treatments']
+2025-08-20 20:13:36,378 - INFO - Hospital: Joe Ben Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,378 - INFO - Exact match for "surgery" in ['multispecialty care', 'surgical services']
+2025-08-20 20:13:36,393 - INFO - Hospital: Toun Memorial Specialist Hospital, Service Match: 1.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 20:13:36,393 - INFO - No match for "surgery" in ['emergency', 'maternity', 'pediatrics', 'cardiology', 'orthopedics', 'radiology', 'blood bank', 'dental']
+2025-08-20 20:13:36,393 - INFO - Hospital: General Hospital Ikorodu, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-20 20:13:36,393 - INFO - No match for "surgery" in ['general medicine', 'specialized care', 'laboratory', 'pharmacy']
+2025-08-20 20:13:36,409 - INFO - Hospital: Oak Hospitals, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Newgate Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Holyfill Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Katis Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Kings Court Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Lifesource Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: COSAN Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Landmark Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Aruna Ogun Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine', 'pediatrics', 'dental', 'laboratory']
+2025-08-20 20:13:36,409 - INFO - Hospital: Ajayi Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Amodu Adesola Memorial Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine', 'diagnostic']
+2025-08-20 20:13:36,409 - INFO - Hospital: Bidems Victory Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Bolakunmi Idowu Memorial Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine', 'maternity']
+2025-08-20 20:13:36,409 - INFO - Hospital: Jobi Clinic & Maternity Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: M-Cred Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: The Real Hope Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Baytu-Seha Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: Dasochris Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,409 - INFO - Hospital: St Everest Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,409 - INFO - No match for "surgery" in ['general medicine', 'maternity']
+2025-08-20 20:13:36,425 - INFO - Hospital: Prince of Peace Hospital & Maternity Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,425 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,425 - INFO - Hospital: Ire Anu Hospitals, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,425 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,425 - INFO - Hospital: Great Foundation Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,425 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:13:36,425 - INFO - Hospital: De-Lakeland Imperial Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 20:13:36,456 - INFO - Interactive map saved to static/map_output.html
+2025-08-20 20:13:36,456 - INFO - Recommendations saved to recommended_hospitals.csv
+2025-08-20 20:18:12,659 - INFO - API queries_quota: 60

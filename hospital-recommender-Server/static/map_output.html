@@ -1,0 +1,154 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Hospital Recommendations Map</title>
+        <style>
+            #map { height: 500px; width: 100%; }
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .address-link { color: blue; cursor: pointer; text-decoration: underline; }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEczEbQM5LxSMj7YnE_AilwIecNwzLhJk&callback=initMap" async defer></script>
+    </head>
+    <body>
+        <h2>Recommended Hospitals for surgery in Ikorodu</h2>
+        <div id="map"></div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Services</th>
+                <th>Cost Level</th>
+                <th>Quality Score</th>
+                <th>Recommendation Score</th>
+                <th>Distance</th>
+                <th>Duration</th>
+            </tr>
+            
+            <tr>
+                <td>Toun Memorial Specialist Hospital</td>
+                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Toun Memorial Specialist Hospital')">Ikorodu, Lagos</span></td>
+                <td>Multispecialty Care, Surgical Services</td>
+                <td>High</td>
+                <td>4</td>
+                <td>0.85</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            
+            <tr>
+                <td>General Hospital Ikorodu</td>
+                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'General Hospital Ikorodu')">T.O.S. Benson Road, Ikorodu, Lagos, Nigeria</span></td>
+                <td>Emergency, Maternity, Pediatrics, Cardiology, Orthopedics, Radiology, Blood Bank, Dental</td>
+                <td>Low</td>
+                <td>3</td>
+                <td>0.85</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            
+            <tr>
+                <td>Aruna Ogun Memorial Specialist Hospital</td>
+                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Aruna Ogun Memorial Specialist Hospital')">3/4 Bamimosu Street, Ebute, Ikorodu</span></td>
+                <td>Surgical Services, Pediatric Care</td>
+                <td>Medium</td>
+                <td>4</td>
+                <td>0.656</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            
+        </table>
+        <script>
+            let map;
+            let markers = [];
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 6.5244, lng: 3.3792},
+                    zoom: 12
+                });
+                
+                const marker = new google.maps.Marker({
+                    position: {lat: 6.5244, lng: 3.3792},
+                    map: map,
+                    title: 'Toun Memorial Specialist Hospital'
+                });
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div>
+                            <h3>Toun Memorial Specialist Hospital</h3>
+                            <p><strong>Address:</strong> Ikorodu, Lagos</p>
+                            <p><strong>Services:</strong> Multispecialty Care, Surgical Services</p>
+                            <p><strong>Cost Level:</strong> High</p>
+                            <p><strong>Quality Score:</strong> 4</p>
+                            <p><strong>Recommendation Score:</strong> 0.85</p>
+                        </div>
+                    `
+                });
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+                markers.push({marker: marker, infoWindow: infoWindow});
+                
+                const marker = new google.maps.Marker({
+                    position: {lat: 6.5244, lng: 3.3792},
+                    map: map,
+                    title: 'General Hospital Ikorodu'
+                });
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div>
+                            <h3>General Hospital Ikorodu</h3>
+                            <p><strong>Address:</strong> T.O.S. Benson Road, Ikorodu, Lagos, Nigeria</p>
+                            <p><strong>Services:</strong> Emergency, Maternity, Pediatrics, Cardiology, Orthopedics, Radiology, Blood Bank, Dental</p>
+                            <p><strong>Cost Level:</strong> Low</p>
+                            <p><strong>Quality Score:</strong> 3</p>
+                            <p><strong>Recommendation Score:</strong> 0.85</p>
+                        </div>
+                    `
+                });
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+                markers.push({marker: marker, infoWindow: infoWindow});
+                
+                const marker = new google.maps.Marker({
+                    position: {lat: 6.5244, lng: 3.3792},
+                    map: map,
+                    title: 'Aruna Ogun Memorial Specialist Hospital'
+                });
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div>
+                            <h3>Aruna Ogun Memorial Specialist Hospital</h3>
+                            <p><strong>Address:</strong> 3/4 Bamimosu Street, Ebute, Ikorodu</p>
+                            <p><strong>Services:</strong> Surgical Services, Pediatric Care</p>
+                            <p><strong>Cost Level:</strong> Medium</p>
+                            <p><strong>Quality Score:</strong> 4</p>
+                            <p><strong>Recommendation Score:</strong> 0.656</p>
+                        </div>
+                    `
+                });
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+                markers.push({marker: marker, infoWindow: infoWindow});
+                
+            }
+            function panToHospital(lat, lng, name) {
+                map.setCenter({lat: lat, lng: lng});
+                map.setZoom(15);
+                markers.forEach(m => {
+                    if (m.marker.getTitle() === name) {
+                        m.infoWindow.open(map, m.marker);
+                    } else {
+                        m.infoWindow.close();
+                    }
+                });
+            }
+        </script>
+    </body>
+    </html>
+    
