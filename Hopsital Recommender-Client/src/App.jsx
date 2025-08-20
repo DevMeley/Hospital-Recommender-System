@@ -27,7 +27,7 @@ function App() {
 
     try {
       const res = await fetch(
-        "https://hospital-recommender-system.onrender.com/recommend",
+        "/api/recommend",
         {
           method: "POST",
           body: JSON.stringify(formData),

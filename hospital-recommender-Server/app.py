@@ -3,18 +3,20 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from hospital_recommender import recommend_hospitals  # Updated import
+from hospital_recommender import recommend_hospitals
 import pandas as pd
 import os
 
 app = FastAPI(title="Hospital Recommender API")
 
+# === CORS (only needed in dev when frontend runs on Vite/CRA server) ===
 origins = [
-    "http://localhost:5173",
+    "http://localhost:5173",   
+    "http://localhost:3000",   
     "https://hopsital-recommendation-system.vercel.app",
 ]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -23,6 +25,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# === Models ===
 class RecommendationRequest(BaseModel):
     location: str
     service_needed: str
@@ -40,15 +43,12 @@ class RecommendationResponse(BaseModel):
     route_duration: str | None
     route_instructions: str | None
 
-@app.get("/", response_class=RedirectResponse)
-async def root():
-    return "/docs"
-
+# === API ROUTES ===
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
 
-@app.post("/recommend")
+@app.post("/api/recommend")  # <- put under /api
 async def get_recommendations(request: RecommendationRequest):
     try:
         valid_categories = {"Low", "Medium", "High"}
@@ -59,9 +59,9 @@ async def get_recommendations(request: RecommendationRequest):
         if quality_pref not in valid_categories:
             raise HTTPException(status_code=400, detail="Invalid quality preference. Must be Low, Medium, or High.")
 
-        dataset_path = "Lagos_hospital.csv"
+        dataset_path = os.path.join(os.path.dirname(__file__), "Lagos_hospital.csv")
         if not os.path.exists(dataset_path):
-            raise HTTPException(status_code=500, detail="Hospital dataset not found. Please ensure Lagos_hospital.csv is available.")
+            raise HTTPException(status_code=500, detail="Hospital dataset not found.")
 
         try:
             df = pd.read_csv(dataset_path)
@@ -70,11 +70,10 @@ async def get_recommendations(request: RecommendationRequest):
             if missing_columns:
                 raise HTTPException(status_code=500, detail=f"Dataset missing required columns: {missing_columns}")
         except pd.errors.ParserError:
-            raise HTTPException(status_code=500, detail="Invalid CSV format in Lagos_hospital.csv. Check for correct headers and delimiters.")
+            raise HTTPException(status_code=500, detail="Invalid CSV format in Lagos_hospital.csv.")
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Error reading dataset: {str(e)}")
 
-        # Unpack the tuple from recommend_hospitals
         recommendations, map_file = recommend_hospitals(
             location=request.location,
             user_service=request.service_needed,
@@ -85,7 +84,6 @@ async def get_recommendations(request: RecommendationRequest):
         if recommendations.empty:
             raise HTTPException(status_code=404, detail="No hospitals found matching your criteria.")
 
-        # Convert DataFrame to list of RecommendationResponse objects
         response = [
             RecommendationResponse(
                 name=row["Name"],
@@ -101,12 +99,20 @@ async def get_recommendations(request: RecommendationRequest):
             for _, row in recommendations.iterrows()
         ]
 
-        # Add map URL to the response
         map_url = f"/map" if map_file else None
         return {"recommendations": response, "map_url": map_url}
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing request: {str(e)}")
+
+# === SERVE FRONTEND BUILD ===
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FRONTEND_BUILD = os.path.join(BASE_DIR, "..", "frontend", "dist")  # Vite default
+if not os.path.exists(FRONTEND_BUILD):
+    FRONTEND_BUILD = os.path.join(BASE_DIR, "..", "frontend", "build")  # CRA fallback
+
+if os.path.exists(FRONTEND_BUILD):
+    app.mount("/", StaticFiles(directory=FRONTEND_BUILD, html=True), name="frontend")
 
 if __name__ == '__main__':
     import uvicorn
