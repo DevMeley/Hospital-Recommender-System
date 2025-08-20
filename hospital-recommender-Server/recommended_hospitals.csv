@@ -1,4 +1,4 @@
-Name,Full Address,Services,Cost Level,Quality Score,User Rating,City,Location_Match,Coordinates,Recommendation_Score,Route_Distance,Route_Duration,Route_Instructions
-Active Health Managers Limited,"Dolphin Estate, Ikoyi",Corporate Health Management,High,4,4.2,ikoyi,1.0,"(6.5244, 3.3792)",0.19999573196756149,,,N/A
-Crest Consultant Clinic,"Keffi Street, Ikoyi",Specialist Medical Consultations,High,4,4.2,ikoyi,1.0,"(6.5244, 3.3792)",0.19999573196756149,,,N/A
-Diamondshield Health Services,Ikoyi,Corporate Healthcare Programs,High,4,4.3,ikoyi,1.0,"(6.5244, 3.3792)",0.19999573196756149,,,N/A
+Name,Full Address,Services,Cost Level,Quality Score,User Rating,City,Coordinates,Recommendation_Score,Route_Distance,Route_Duration,Route_Instructions
+Continental Hospital & Maternity,"11 Ago Owu Street, Onipanu","Maternity Care, Surgical Services",Medium,3,3.8,onipanu,"(6.5244, 3.3792)",0.8500000000000004,,,N/A
+Badamus Hospital,Lagos Airport Road,"Emergency Medicine, Surgical Services",Medium,3,3.7,lagos airport road,"(6.5244, 3.3792)",0.8500000000000004,,,N/A
+Badagari General Hospital,Badagry,General Medical Services,Low,3,3.2,badagry,"(6.5244, 3.3792)",0.8500000000000004,,,N/A

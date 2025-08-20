@@ -112,3 +112,573 @@
 2025-08-20 20:13:36,456 - INFO - Interactive map saved to static/map_output.html
 2025-08-20 20:13:36,456 - INFO - Recommendations saved to recommended_hospitals.csv
 2025-08-20 20:18:12,659 - INFO - API queries_quota: 60
+2025-08-20 20:34:03,682 - INFO - Loading dataset Lagos_hospital.csv
+2025-08-20 20:34:03,696 - INFO - User city extracted: ikoyi
+2025-08-20 20:34:03,703 - INFO - Unique hospital cities: ['lagos island' 'gbagada' 'surulere' 'iju' 'idimu' 'ikeja' 'ikoyi' 'ipaja'
+ 'bariga' 'jibowu' 'appa' 'ojo' 'ajangbadi' 'ijesatedo' 'victoria island'
+ 'ifako-ijaiye' 'apapa' 'ikorodu' 'unknown' 'lagos airport road' 'badagry'
+ 'ilupeju' 'yaba' 'agege' 'egbe' 'ogba' 'ajah' 'off alake' 'mushin'
+ 'okomalam' 'onipanu' 'akowonjo' 'egbeda' 'ketu' 'fagba' 'akoka'
+ 'mafoluku-oshodi' 'ebute metta' 'iba' 'festac town' 'agbado' 'shogunle'
+ 'obalende' 'okota' 'lekki' 'isolo' 'idi-araba' 'igbobi' 'oshodi-isolo'
+ 'alagbado' 'epe' 'shomolu' 'lagos mainland']
+2025-08-20 20:34:04,703 - ERROR - Geocoding error for 'Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:04,922 - ERROR - Geocoding error for 'Dolphin Estate, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:05,127 - ERROR - Geocoding error for '86 Norman Williams, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:05,566 - ERROR - Geocoding error for 'Alhaji Ribadu Road, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:05,788 - ERROR - Geocoding error for 'Keffi Street, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:06,009 - ERROR - Geocoding error for '16 Akanbi Danmole Street, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:06,246 - ERROR - Geocoding error for 'Maduike Street, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:07,369 - ERROR - Geocoding error for '16b Maduike Street, Off Raymond Njoku, Ikoyi': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:07,575 - ERROR - Geocoding error for 'Keffi Street, South-West Ikoyi, Lagos': REQUEST_DENIED (The provided API key is invalid. )
+2025-08-20 20:34:07,967 - INFO - No match for "surgery" in ['corporate health management']
+2025-08-20 20:34:07,983 - INFO - Hospital: Active Health Managers Limited, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 20:34:07,983 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 20:34:08,002 - INFO - Hospital: Citizen Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['optometry services']
+2025-08-20 20:34:08,002 - INFO - Hospital: Clear View Optics Ltd, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['specialist medical consultations']
+2025-08-20 20:34:08,002 - INFO - Hospital: Crest Consultant Clinic, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['corporate healthcare programs']
+2025-08-20 20:34:08,002 - INFO - Hospital: Diamondshield Health Services, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['general practice']
+2025-08-20 20:34:08,002 - INFO - Hospital: Divine Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['general medicine', 'laboratory services']
+2025-08-20 20:34:08,002 - INFO - Hospital: Gold Cross Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['executive medicine', 'specialist referrals', 'wellness programs']
+2025-08-20 20:34:08,002 - INFO - Hospital: Providence Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 20:34:08,002 - INFO - No match for "surgery" in ['dental surgery', 'orthodontics', 'teeth whitening']
+2025-08-20 20:34:08,014 - INFO - Hospital: Smile360 Dental Specialists, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 20:34:08,014 - INFO - No match for "surgery" in ['geriatric care', 'chronic disease management']
+2025-08-20 20:34:08,014 - INFO - Hospital: St. Francis Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 20:34:08,014 - INFO - Interactive map saved to static/map_output.html
+2025-08-20 20:34:08,014 - INFO - Recommendations saved to recommended_hospitals.csv
+2025-08-20 21:10:57,052 - INFO - Loading dataset Lagos_hospital.csv
+2025-08-20 21:10:57,063 - INFO - User city extracted: ikoyi
+2025-08-20 21:10:57,074 - INFO - Unique hospital cities: ['lagos island' 'gbagada' 'surulere' 'iju' 'idimu' 'ikeja' 'ikoyi' 'ipaja'
+ 'bariga' 'jibowu' 'appa' 'ojo' 'ajangbadi' 'ijesatedo' 'victoria island'
+ 'ifako-ijaiye' 'apapa' 'ikorodu' 'unknown' 'lagos airport road' 'badagry'
+ 'ilupeju' 'yaba' 'agege' 'egbe' 'ogba' 'ajah' 'off alake' 'mushin'
+ 'okomalam' 'onipanu' 'akowonjo' 'egbeda' 'ketu' 'fagba' 'akoka'
+ 'mafoluku-oshodi' 'ebute metta' 'iba' 'festac town' 'agbado' 'shogunle'
+ 'obalende' 'okota' 'lekki' 'isolo' 'idi-araba' 'igbobi' 'oshodi-isolo'
+ 'alagbado' 'epe' 'shomolu' 'lagos mainland']
+2025-08-20 21:10:57,079 - WARNING - Invalid cached coordinates for 'Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,079 - WARNING - Invalid cached coordinates for 'Dolphin Estate, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for '3/4 Bamimosu Street, Ebute, Ikorodu'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for 'Ikorodu'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for '86 Norman Williams, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for 'Alhaji Ribadu Road, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for 'Keffi Street, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for '26 Olaide Village, Ikorodu'. Re-geocoding.
+2025-08-20 21:10:57,080 - WARNING - Invalid cached coordinates for '16 Akanbi Danmole Street, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,081 - WARNING - Invalid cached coordinates for '9 Muniratu Aleje Street, Ikorodu'. Re-geocoding.
+2025-08-20 21:10:57,081 - WARNING - Invalid cached coordinates for 'Ikorodu Road'. Re-geocoding.
+2025-08-20 21:10:57,081 - WARNING - Invalid cached coordinates for 'Maduike Street, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,081 - WARNING - Invalid cached coordinates for '16b Maduike Street, Off Raymond Njoku, Ikoyi'. Re-geocoding.
+2025-08-20 21:10:57,081 - WARNING - Invalid cached coordinates for 'Keffi Street, South-West Ikoyi, Lagos'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for 'Ikorodu, Lagos'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for 'T.O.S. Benson Road, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for '191 Lagos Road, Before Agric Bus Stop, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for '59 Lagos Road, Newgate Bus Stop, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for '1 Onafowokan Street, Opposite Mejabot Filling Station, Owutu, Agric, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for '1 Shamsideen Jaiyesimi Street, Aga, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for '56 Itokin Road, Otun Bus Stop, Lucky Fibre, Itamope, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for 'Plot 12 Biovic Boulevard, Jajo Estate, Off Mowo-Nla Road, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for '6 Ola Balogun Street, Behind LG Primary School, Igbe-Laara, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,082 - WARNING - Invalid cached coordinates for 'JGJC+6G, Ikorodu-Epe Rd, Akasolori, Ikorodu 104101, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '2/4 Bamimosu Street, Ebutte, Ipakodo, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '50 Eluku Street, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '5 Anibaba Street, Off Ireshe Road, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for 'Simco Ummekwu Street, Off Isawo Road, Agric, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '5 Segun Ishola Street, Owutu, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '3-5 Adeyeri Owuyo Street, Behind Zenith Bank, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '5 Eunice Iyayi Street, Odogunyan, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for 'Kilometers 3 Ikorodu-Shagamu Express Way, Ita-Oluwo, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for 'Degolu Road, Igbogbo, 234001, Ikorodu, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,083 - WARNING - Invalid cached coordinates for '2nd Avenue, Poboyejo Estate, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,084 - WARNING - Invalid cached coordinates for '3 Fatima Bintu Street, Sholebo Estate, Off Ebute-Igbobo Road, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,084 - WARNING - Invalid cached coordinates for '3 Omo Oba Shibajo Way, Agbede Transformer, Ita Oluwo Road, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,084 - WARNING - Invalid cached coordinates for '120 Lagos Road, Haruna, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,084 - WARNING - Invalid cached coordinates for '77 Odonla Road, Odogunyan, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,084 - WARNING - Invalid cached coordinates for '180 Awolowo Way, Itamaga, Ikorodu, Lagos, Nigeria'. Re-geocoding.
+2025-08-20 21:10:57,397 - INFO - No match for "surgery" in ['general medicine', 'minor surgical procedures']
+2025-08-20 21:10:57,412 - INFO - Hospital: Johnken Specialist Private Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 21:10:57,412 - INFO - No match for "surgery" in ['pediatric cardiology', 'neonatal intensive care']
+2025-08-20 21:10:57,428 - INFO - Hospital: Afrimed Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,428 - INFO - No match for "surgery" in ['diagnostic imaging', 'laboratory testing']
+2025-08-20 21:10:57,428 - INFO - Hospital: A And A Medical Diagnostic Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,428 - INFO - No match for "surgery" in ['primary healthcare services']
+2025-08-20 21:10:57,444 - INFO - Hospital: AB 10 Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-20 21:10:57,444 - INFO - No match for "surgery" in ['dental procedures', 'ophthalmology services']
+2025-08-20 21:10:57,444 - INFO - Hospital: AB Specialist Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-20 21:10:57,444 - INFO - Exact match for "surgery" in ['surgical services', 'obstetric care']
+2025-08-20 21:10:57,475 - INFO - Hospital: AB Specialist Hospital Limited, Service Match: 1.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 21:10:57,475 - INFO - No match for "surgery" in ['emergency medical services']
+2025-08-20 21:10:57,475 - INFO - Hospital: Abey K Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,478 - INFO - No match for "surgery" in ['corporate health management']
+2025-08-20 21:10:57,478 - INFO - Hospital: Active Health Managers Limited, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,478 - INFO - No match for "surgery" in ['pediatric care', 'antenatal services']
+2025-08-20 21:10:57,478 - INFO - Hospital: Adefemi Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,478 - INFO - No match for "surgery" in ['primary healthcare']
+2025-08-20 21:10:57,478 - INFO - Hospital: Adesola Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,478 - INFO - No match for "surgery" in ['surgical procedures', 'diagnostic services']
+2025-08-20 21:10:57,491 - INFO - Hospital: Agbonmagbe Olumide Memorial Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,491 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 21:10:57,491 - INFO - Hospital: Ahmadiyya Clinic (Hospital), Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,491 - INFO - No match for "surgery" in ['primary healthcare services']
+2025-08-20 21:10:57,491 - INFO - Hospital: Ahmadiyya Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,491 - INFO - No match for "surgery" in ['emergency care', 'maternity services']
+2025-08-20 21:10:57,491 - INFO - Hospital: Ajangbadi Central Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,491 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 21:10:57,491 - INFO - Hospital: Alalade Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,491 - INFO - No match for "surgery" in ['multispecialty medical services']
+2025-08-20 21:10:57,507 - INFO - Hospital: Alfer Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,507 - INFO - Partial match for "surgery" in ['pediatric medicine', 'general surgery']
+2025-08-20 21:10:57,529 - INFO - Hospital: Alheri Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,529 - INFO - No match for "surgery" in ['general surgical services']
+2025-08-20 21:10:57,529 - INFO - Hospital: All In Care Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,529 - INFO - No match for "surgery" in ['primary healthcare']
+2025-08-20 21:10:57,529 - INFO - Hospital: All Souls Clinics Limited, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,529 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 21:10:57,529 - INFO - Hospital: Amazing Saints Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,529 - INFO - No match for "surgery" in ['general medicine', 'emergency services']
+2025-08-20 21:10:57,529 - INFO - Hospital: Apapa General Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,529 - INFO - Exact match for "surgery" in ['surgical services', 'pediatric care']
+2025-08-20 21:10:57,529 - INFO - Hospital: Aruna Ogun Memorial Specialist Hospital, Service Match: 1.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 21:10:57,529 - INFO - No match for "surgery" in ['maternity services', 'general practice']
+2025-08-20 21:10:57,529 - INFO - Hospital: Ayo-Ade Oshin Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,529 - INFO - Exact match for "surgery" in ['emergency medicine', 'surgical services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Badamus Hospital, Service Match: 1.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medical services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Badagari General Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['ophthalmology services']
+2025-08-20 21:10:57,554 - INFO - Hospital: BAF Eye Centre Ltd, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['cardiac diagnostics', 'treatment']
+2025-08-20 21:10:57,554 - INFO - Hospital: Barnes Diagnostic And Heart Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['military healthcare services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Base Hospital - NA, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Baylight Watch Hospitals Ltd, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['primary healthcare services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Betta Hospital Ltd, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['maternity care', 'pediatric services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Bimax Hospital and Maternity Home, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general surgical procedures']
+2025-08-20 21:10:57,554 - INFO - Hospital: Bissalam Hospital Ltd, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['maternity services', 'primary care']
+2025-08-20 21:10:57,554 - INFO - Hospital: Bodet Medicare and Maternity, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Blue Cross Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['advanced surgical services', 'icu care']
+2025-08-20 21:10:57,554 - INFO - Hospital: Budo Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['maternity services', 'general practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Broad Clinic & Maternity Home, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['primary healthcare services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Calvary Medical Center, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['comprehensive eye care']
+2025-08-20 21:10:57,554 - INFO - Hospital: Cathem Eye Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Chinedum Private Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['primary healthcare services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Chironna Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,554 - INFO - Hospital: Christ Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['primary healthcare']
+2025-08-20 21:10:57,554 - INFO - Hospital: Our Lord Christ Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Chromeu Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,554 - INFO - Hospital: Citizen Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['maternity services', 'pediatric care']
+2025-08-20 21:10:57,554 - INFO - Hospital: City Hospital and Maternity Care, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['optometry services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Clear View Optics Ltd, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - Exact match for "surgery" in ['maternity care', 'surgical services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Continental Hospital & Maternity, Service Match: 1.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['specialist medical consultations']
+2025-08-20 21:10:57,554 - INFO - Hospital: Crest Consultant Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['emergency medical services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Critical Rescue International, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,554 - INFO - Hospital: Crystal Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['surgical procedures', 'diagnostic services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Crystal Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Debof Clinic Limited, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['primary healthcare']
+2025-08-20 21:10:57,554 - INFO - Hospital: Deji Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['basic medical services']
+2025-08-20 21:10:57,554 - INFO - Hospital: Deji Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,554 - INFO - Hospital: Demola Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['multispecialty medical center']
+2025-08-20 21:10:57,554 - INFO - Hospital: Deseret International Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['corporate healthcare programs']
+2025-08-20 21:10:57,554 - INFO - Hospital: Diamondshield Health Services, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general practice']
+2025-08-20 21:10:57,554 - INFO - Hospital: Divine Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['general consultations', 'basic diagnostics']
+2025-08-20 21:10:57,554 - INFO - Hospital: Dolfac Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['primary healthcare', 'minor procedures']
+2025-08-20 21:10:57,554 - INFO - Hospital: Dolu Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - No match for "surgery" in ['basic health screenings', 'vaccinations']
+2025-08-20 21:10:57,554 - INFO - Hospital: Dolu Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,554 - INFO - Partial match for "surgery" in ['pediatric surgery', 'neonatal intensive care']
+2025-08-20 21:10:57,590 - INFO - Hospital: Doren Specialist Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,590 - INFO - Partial match for "surgery" in ['orthopedic surgery', 'sports medicine']
+2025-08-20 21:10:57,590 - INFO - Hospital: Dortem Specialist Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,591 - INFO - No match for "surgery" in ['cardiac care', 'neurological services', 'advanced imaging']
+2025-08-20 21:10:57,591 - INFO - Hospital: Duro Soleye Hospitals, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,591 - INFO - No match for "surgery" in ['community health services', 'immunizations']
+2025-08-20 21:10:57,609 - INFO - Hospital: Ebutameta Health Center, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 2.00, Score: 0.000
+2025-08-20 21:10:57,609 - INFO - No match for "surgery" in ['general medicine', 'emergency care']
+2025-08-20 21:10:57,610 - INFO - Hospital: Echos Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-20 21:10:57,610 - INFO - No match for "surgery" in ['obstetrics', 'gynecological services']
+2025-08-20 21:10:57,610 - INFO - Hospital: Ekemode Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,610 - INFO - No match for "surgery" in ['tertiary care', 'intensive care unit', 'specialist referrals']
+2025-08-20 21:10:57,611 - INFO - Hospital: Eko Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,611 - INFO - No match for "surgery" in ['family medicine', 'chronic disease management']
+2025-08-20 21:10:57,611 - INFO - Hospital: El-Bethel Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary healthcare', 'basic laboratory services']
+2025-08-20 21:10:57,612 - INFO - Hospital: El-Shaddai Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['internal medicine', 'diagnostic services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Emel Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general practice', 'minor procedures']
+2025-08-20 21:10:57,612 - INFO - Hospital: F-Adeyemi Medical Services, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['basic healthcare', 'pharmacy services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Fafolu Medical, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 2.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general medicine', 'health checkups']
+2025-08-20 21:10:57,612 - INFO - Hospital: Fanimed Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['maternity services', 'child delivery']
+2025-08-20 21:10:57,612 - INFO - Hospital: Fasanmi Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general practice', 'emergency first aid']
+2025-08-20 21:10:57,612 - INFO - Hospital: Fatula Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['public healthcare', 'immunization programs']
+2025-08-20 21:10:57,612 - INFO - Hospital: Federal Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general medicine', 'diagnostic imaging']
+2025-08-20 21:10:57,612 - INFO - Hospital: First Consultant Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['corporate health services', 'executive medicine']
+2025-08-20 21:10:57,612 - INFO - Hospital: First Foundation Medical, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - Partial match for "surgery" in ['general surgery', 'anesthesiology']
+2025-08-20 21:10:57,612 - INFO - Hospital: Framag Specialist Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary care', 'basic treatments']
+2025-08-20 21:10:57,612 - INFO - Hospital: Gbolayemi Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['family medicine', 'preventive care']
+2025-08-20 21:10:57,612 - INFO - Hospital: General Medical Care, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['ent specialist', 'hearing tests', 'speech therapy']
+2025-08-20 21:10:57,612 - INFO - Hospital: German Friendship Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['internal medicine', 'specialist consultations']
+2025-08-20 21:10:57,612 - INFO - Hospital: Georges Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general practice', 'basic diagnostics']
+2025-08-20 21:10:57,612 - INFO - Hospital: Global Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary healthcare', 'vaccination programs']
+2025-08-20 21:10:57,612 - INFO - Hospital: Gloryland Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general medicine', 'laboratory services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Gold Cross Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['multispecialty care', 'advanced diagnostics']
+2025-08-20 21:10:57,612 - INFO - Hospital: Gordons Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary care', 'minor treatments']
+2025-08-20 21:10:57,612 - INFO - Hospital: Hand of God Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - Partial match for "surgery" in ['general surgery', 'post-op care']
+2025-08-20 21:10:57,612 - INFO - Hospital: Havana Specialist Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['family medicine', 'pediatric services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Havilah Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['community health', 'basic treatments']
+2025-08-20 21:10:57,612 - INFO - Hospital: Holy Bethany Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['obstetrics', 'neonatal intensive care']
+2025-08-20 21:10:57,612 - INFO - Hospital: Holy Family Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general practice', 'chronic disease management']
+2025-08-20 21:10:57,612 - INFO - Hospital: Humana Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['occupational health', 'workplace safety']
+2025-08-20 21:10:57,612 - INFO - Hospital: Iganmu Industrial Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['public healthcare', 'emergency services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Ikeja General Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general medicine', 'basic procedures']
+2025-08-20 21:10:57,612 - INFO - Hospital: Ikorodu Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary care', 'health screenings']
+2025-08-20 21:10:57,612 - INFO - Hospital: Imperial Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['audiological tests', 'hearing aid fitting']
+2025-08-20 21:10:57,612 - INFO - Hospital: International Hearing Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['public healthcare', 'maternal services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Isolo General Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general medicine', 'pharmacy services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Jalupon Estate Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary healthcare', 'basic treatments']
+2025-08-20 21:10:57,612 - INFO - Hospital: Joe Ben Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['family medicine', 'vaccinations']
+2025-08-20 21:10:57,612 - INFO - Hospital: Jon-Ken Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['executive medicine', 'specialist consultations']
+2025-08-20 21:10:57,612 - INFO - Hospital: Kamoras Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['internal medicine', 'diagnostic services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Kings Foundation Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['primary care', 'minor procedures']
+2025-08-20 21:10:57,612 - INFO - Hospital: Krown Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['general practice', 'basic healthcare']
+2025-08-20 21:10:57,612 - INFO - Hospital: Kuban Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['maternity services', 'antenatal care']
+2025-08-20 21:10:57,612 - INFO - Hospital: Labi Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['ophthalmology', 'vision correction']
+2025-08-20 21:10:57,612 - INFO - Hospital: Ladkem Eye Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['tertiary care', 'intensive care unit', 'specialist services']
+2025-08-20 21:10:57,612 - INFO - Hospital: Lagoon Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,612 - INFO - No match for "surgery" in ['teaching hospital', 'research', 'specialist care']
+2025-08-20 21:10:57,628 - INFO - Hospital: Lagos State University Teaching Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,628 - INFO - No match for "surgery" in ['tertiary referral center', 'medical education']
+2025-08-20 21:10:57,628 - INFO - Hospital: Lagos University Teaching Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,628 - INFO - No match for "surgery" in ['general medicine', 'health checkups']
+2025-08-20 21:10:57,628 - INFO - Hospital: Life Fountain Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,628 - INFO - No match for "surgery" in ['primary care', 'preventive medicine']
+2025-08-20 21:10:57,629 - INFO - Hospital: Light Care Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['public healthcare', 'emergency services']
+2025-08-20 21:10:57,629 - INFO - Hospital: Mainland Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['general practice', 'basic treatments']
+2025-08-20 21:10:57,629 - INFO - Hospital: Mayfair Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['internal medicine', 'specialist referrals']
+2025-08-20 21:10:57,629 - INFO - Hospital: Mount Sinai Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - Partial match for "surgery" in ['orthopedic surgery', 'rehabilitation services']
+2025-08-20 21:10:57,629 - INFO - Hospital: National Orthopaedic Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['general medicine', 'diagnostic services']
+2025-08-20 21:10:57,629 - INFO - Hospital: New Ikeja Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['multispecialty care', 'advanced treatments']
+2025-08-20 21:10:57,629 - INFO - Hospital: Paelon Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - Partial match for "surgery" in ['cardiac care', 'orthopedic surgery', 'general medicine']
+2025-08-20 21:10:57,629 - INFO - Hospital: Parklande Specialist Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['primary care', 'laboratory testing', 'vaccinations']
+2025-08-20 21:10:57,629 - INFO - Hospital: Pipe Street Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['general consultations', 'maternal health services']
+2025-08-20 21:10:57,629 - INFO - Hospital: Plato Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['neurology consultations', 'advanced diagnostics', 'executive health checks']
+2025-08-20 21:10:57,629 - INFO - Hospital: Premier Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['pediatrics', 'emergency care', 'minor surgical procedures']
+2025-08-20 21:10:57,629 - INFO - Hospital: Promise Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['chronic disease management', 'family medicine', 'counseling services']
+2025-08-20 21:10:57,629 - INFO - Hospital: Providence Christian Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['general practice', 'antenatal care', 'diagnostic imaging']
+2025-08-20 21:10:57,629 - INFO - Hospital: Providence Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['primary healthcare', 'immunizations', 'health education']
+2025-08-20 21:10:57,629 - INFO - Hospital: Providence Health Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['executive medicine', 'specialist referrals', 'wellness programs']
+2025-08-20 21:10:57,629 - INFO - Hospital: Providence Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['family medicine', 'pediatric care', 'vaccinations', 'wellness checkups']
+2025-08-20 21:10:57,629 - INFO - Hospital: Q-life Family Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - No match for "surgery" in ['oncology', 'hematology', 'advanced imaging', 'chemotherapy']
+2025-08-20 21:10:57,629 - INFO - Hospital: Rainbow Specialist Medical Center, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,629 - INFO - Partial match for "surgery" in ['cardiac surgery', 'neurology', 'orthopedics', 'icu']
+2025-08-20 21:10:57,644 - INFO - Hospital: Rapha Specialist Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.850
+2025-08-20 21:10:57,644 - INFO - No match for "surgery" in ['multispecialty tertiary care', 'emergency services', 'icu', 'specialist consultations']
+2025-08-20 21:10:57,644 - INFO - Hospital: Reddington Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,644 - INFO - Exact match for "surgery" in ['general medicine', 'pediatrics', 'surgery', 'diagnostics']
+2025-08-20 21:10:57,659 - INFO - Hospital: Reddington Hospital, Service Match: 1.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.850
+2025-08-20 21:10:57,659 - INFO - Partial match for "surgery" in ['general surgery', 'maternity care', 'emergency medicine']
+2025-08-20 21:10:57,680 - INFO - Hospital: R-Jolad Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 21:10:57,680 - INFO - No match for "surgery" in ['primary healthcare', 'basic diagnostics', 'pharmacy']
+2025-08-20 21:10:57,680 - INFO - Hospital: Robby Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,680 - INFO - No match for "surgery" in ['general practice', 'minor procedures', 'health screenings']
+2025-08-20 21:10:57,680 - INFO - Hospital: Roland Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['pediatrics', 'family medicine', 'laboratory services']
+2025-08-20 21:10:57,691 - INFO - Hospital: Rophecca Medical Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['general medicine', 'chronic disease management']
+2025-08-20 21:10:57,691 - INFO - Hospital: Rotfol Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['executive health', 'specialist consultations']
+2025-08-20 21:10:57,691 - INFO - Hospital: Royal Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['maternity services', 'pediatric care', 'general medicine']
+2025-08-20 21:10:57,691 - INFO - Hospital: Royan Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['obstetrics', 'neonatal care', 'pediatric services']
+2025-08-20 21:10:57,691 - INFO - Hospital: Safe Hope Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['maternity services', 'child delivery', 'antenatal care']
+2025-08-20 21:10:57,691 - INFO - Hospital: Safe-Way Hospital and Maternity, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,691 - INFO - Partial match for "surgery" in ['general practice', 'minor surgery', 'laboratory tests']
+2025-08-20 21:10:57,691 - INFO - Hospital: Samaria Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['corporate health services', 'occupational medicine']
+2025-08-20 21:10:57,691 - INFO - Hospital: Saraki-Ikomi Group Clinics, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['primary healthcare', 'emergency services', 'pharmacy']
+2025-08-20 21:10:57,691 - INFO - Hospital: Shalom Medical Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['general medicine', 'pediatric care', 'emergency services']
+2025-08-20 21:10:57,691 - INFO - Hospital: Shammar Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['pediatric specialty care', 'vaccinations', 'child development']
+2025-08-20 21:10:57,691 - INFO - Hospital: Shepherd Medical Centre (For Children), Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['internal medicine', 'cardiology', 'diagnostic imaging']
+2025-08-20 21:10:57,691 - INFO - Hospital: Shepherd Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['general practice', 'minor procedures', 'pharmacy']
+2025-08-20 21:10:57,691 - INFO - Hospital: Shigun Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['public healthcare', 'emergency services', 'maternity']
+2025-08-20 21:10:57,691 - INFO - Hospital: Shomolu General Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['orthopedics', 'neurology', 'rehabilitation services']
+2025-08-20 21:10:57,691 - INFO - Hospital: Sinai Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - Partial match for "surgery" in ['general surgery', 'obstetrics', 'laboratory services']
+2025-08-20 21:10:57,691 - INFO - Hospital: Skimar Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['dental surgery', 'orthodontics', 'teeth whitening']
+2025-08-20 21:10:57,691 - INFO - Hospital: Smile360 Dental Specialists, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['primary care', 'diagnostics', 'pharmacy']
+2025-08-20 21:10:57,691 - INFO - Hospital: Solad Medical Center, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - Partial match for "surgery" in ['general medicine', 'pediatrics', 'minor surgery']
+2025-08-20 21:10:57,691 - INFO - Hospital: Solid Rock Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['family medicine', 'chronic disease management']
+2025-08-20 21:10:57,691 - INFO - Hospital: Standard Life Care Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['gynecology', 'fertility services', 'ultrasound']
+2025-08-20 21:10:57,691 - INFO - Hospital: St Claire Specialist Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - No match for "surgery" in ['general practice', 'emergency care', 'pharmacy']
+2025-08-20 21:10:57,691 - INFO - Hospital: St. Catherine's Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,691 - INFO - Exact match for "surgery" in ['multispecialty care', 'surgical services']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Charles Hospitals Limited, Service Match: 1.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['maternity services', 'pediatric care', 'vaccinations']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Claver Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['geriatric care', 'chronic disease management']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Francis Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - Partial match for "surgery" in ['general surgery', 'internal medicine']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. George Hospital Ltd., Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['executive health', 'specialist consultations']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Georges Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['comprehensive tertiary care', 'icu', 'specialist services']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Ives Hospitals, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['primary healthcare', 'vaccinations']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Louise Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['corporate health', 'executive checkups']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Louise Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ["women's health", 'fertility services']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Mary's Specialist Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['pediatric specialty care', 'vaccinations']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Mary's Children's Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['tertiary care', 'specialist referrals', 'emergency']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Nicolas Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['obstetrics', 'neonatal care', 'antenatal']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Thelma's Hospital & Maternity, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,707 - INFO - Partial match for "surgery" in ['general medicine', 'minor surgery']
+2025-08-20 21:10:57,707 - INFO - Hospital: St. Thomas Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.656
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['primary care', 'emergency services']
+2025-08-20 21:10:57,707 - INFO - Hospital: Star Light Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['general practice', 'laboratory services']
+2025-08-20 21:10:57,707 - INFO - Hospital: Strong Tower Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['traditional medicine', 'herbal remedies']
+2025-08-20 21:10:57,707 - INFO - Hospital: Subol Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 2.00, Score: 0.656
+2025-08-20 21:10:57,707 - INFO - No match for "surgery" in ['geriatric care', 'chronic disease management']
+2025-08-20 21:10:57,722 - INFO - Hospital: Sunrise Cares Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['public healthcare', 'emergency services']
+2025-08-20 21:10:57,722 - INFO - Hospital: Surulere General Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['general medicine', 'minor procedures']
+2025-08-20 21:10:57,722 - INFO - Hospital: Syl Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.656
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['occupational health', 'corporate medicine']
+2025-08-20 21:10:57,722 - INFO - Hospital: Talent Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['primary healthcare', 'vaccinations']
+2025-08-20 21:10:57,722 - INFO - Hospital: Teboree Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['industrial healthcare', 'first aid']
+2025-08-20 21:10:57,722 - INFO - Hospital: Teju Industries Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['general practice', 'laboratory services']
+2025-08-20 21:10:57,722 - INFO - Hospital: Tetra Line Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['family medicine', 'health screenings']
+2025-08-20 21:10:57,722 - INFO - Hospital: The Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['internal medicine', 'specialist consultations']
+2025-08-20 21:10:57,722 - INFO - Hospital: The Duke Medical, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['general healthcare', 'emergency services']
+2025-08-20 21:10:57,722 - INFO - Hospital: Timu Hospital Group, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['maternity services', 'pediatric care']
+2025-08-20 21:10:57,722 - INFO - Hospital: Tolu Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['physical therapy', 'rehabilitation']
+2025-08-20 21:10:57,722 - INFO - Hospital: Tons Physiotherapy Clinics, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - Partial match for "surgery" in ['general surgery', 'diagnostic imaging']
+2025-08-20 21:10:57,722 - INFO - Hospital: Topaz Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,722 - INFO - Exact match for "surgery" in ['multispecialty care', 'surgical services']
+2025-08-20 21:10:57,722 - INFO - Hospital: Toun Memorial Specialist Hospital, Service Match: 1.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['executive health', 'specialist medicine']
+2025-08-20 21:10:57,722 - INFO - Hospital: Towers Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['family medicine', 'pediatric care']
+2025-08-20 21:10:57,722 - INFO - Hospital: Treasure Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - Partial match for "surgery" in ['general practice', 'minor surgery']
+2025-08-20 21:10:57,722 - INFO - Hospital: Treasurehunt Hospital, Service Match: 0.95, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['comprehensive healthcare', 'diagnostics']
+2025-08-20 21:10:57,722 - INFO - Hospital: Triumph Medical Center, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['general medicine', 'emergency care']
+2025-08-20 21:10:57,722 - INFO - Hospital: Tropicana Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['tertiary care', 'medical education']
+2025-08-20 21:10:57,722 - INFO - Hospital: University Teaching Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['executive health', 'preventive medicine']
+2025-08-20 21:10:57,722 - INFO - Hospital: Uptown Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['obstetrics', 'neonatal care']
+2025-08-20 21:10:57,722 - INFO - Hospital: Vincent Maternity, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,722 - INFO - No match for "surgery" in ['cardiology', 'neurology']
+2025-08-20 21:10:57,730 - INFO - Hospital: Vones Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['internal medicine', 'diagnostics']
+2025-08-20 21:10:57,730 - INFO - Hospital: Westcare Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general practice', 'pharmacy']
+2025-08-20 21:10:57,730 - INFO - Hospital: White Chapel Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['comprehensive healthcare']
+2025-08-20 21:10:57,730 - INFO - Hospital: White Chapel Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['primary healthcare', 'emergency services']
+2025-08-20 21:10:57,730 - INFO - Hospital: Yaba Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Zenith Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.156
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['family medicine', 'pediatrics']
+2025-08-20 21:10:57,730 - INFO - Hospital: Zenith Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ["women's health", 'gynecology']
+2025-08-20 21:10:57,730 - INFO - Hospital: Zoe Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine', 'emergency care']
+2025-08-20 21:10:57,730 - INFO - Hospital: St. Emmanuel Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['charity healthcare', 'primary medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Hope Foundation Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['obstetrics', 'fertility services']
+2025-08-20 21:10:57,730 - INFO - Hospital: South Shore Women's Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general practice', 'chronic care']
+2025-08-20 21:10:57,730 - INFO - Hospital: Living Hope Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['emergency', 'maternity', 'pediatrics', 'cardiology', 'orthopedics', 'radiology', 'blood bank', 'dental']
+2025-08-20 21:10:57,730 - INFO - Hospital: General Hospital Ikorodu, Service Match: 0.00, Proximity Score: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine', 'specialized care', 'laboratory', 'pharmacy']
+2025-08-20 21:10:57,730 - INFO - Hospital: Oak Hospitals, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Newgate Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine', 'specialized care']
+2025-08-20 21:10:57,730 - INFO - Hospital: The Excellence Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Holyfill Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Katis Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Kings Court Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine', 'specialized care']
+2025-08-20 21:10:57,730 - INFO - Hospital: De Victory Life Specialist Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Lifesource Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: COSAN Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Landmark Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Aruna Ogun Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine', 'pediatrics', 'dental', 'laboratory']
+2025-08-20 21:10:57,730 - INFO - Hospital: Ajayi Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,730 - INFO - Hospital: Amodu Adesola Memorial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,730 - INFO - No match for "surgery" in ['general medicine', 'pregnancy care']
+2025-08-20 21:10:57,738 - INFO - Hospital: Atayese Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine', 'diagnostic']
+2025-08-20 21:10:57,738 - INFO - Hospital: Bidems Victory Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Bolakunmi Idowu Memorial Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Bronila Medical Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Ikorodu Hospital & Clinic, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine', 'maternity']
+2025-08-20 21:10:57,738 - INFO - Hospital: Jobi Clinic & Maternity Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: M-Cred Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: The Real Hope Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Baytu-Seha Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Bronk Premier Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Dasochris Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: St Everest Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine', 'maternity']
+2025-08-20 21:10:57,738 - INFO - Hospital: Prince of Peace Hospital & Maternity Centre, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Ire Anu Hospitals, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: Great Foundation Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,738 - INFO - No match for "surgery" in ['general medicine']
+2025-08-20 21:10:57,738 - INFO - Hospital: De-Lakeland Imperial Hospital, Service Match: 0.00, Proximity Score: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-20 21:10:57,754 - INFO - Interactive map saved to static/map_output.html
+2025-08-20 21:10:57,754 - INFO - Recommendations saved to recommended_hospitals.csv

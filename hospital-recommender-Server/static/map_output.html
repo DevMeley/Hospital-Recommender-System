@@ -10,10 +10,11 @@
             th { background-color: #f2f2f2; }
             .address-link { color: blue; cursor: pointer; text-decoration: underline; }
         </style>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEczEbQM5LxSMj7YnE_AilwIecNwzLhJk&callback=initMap" async defer></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     </head>
     <body>
-        <h2>Recommended Hospitals for surgery in Ikorodu</h2>
+        <h2>Recommended Hospitals for surgery in Ikoyi</h2>
         <div id="map"></div>
         <table>
             <tr>
@@ -28,21 +29,10 @@
             </tr>
             
             <tr>
-                <td>Toun Memorial Specialist Hospital</td>
-                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Toun Memorial Specialist Hospital')">Ikorodu, Lagos</span></td>
-                <td>Multispecialty Care, Surgical Services</td>
-                <td>High</td>
-                <td>4</td>
-                <td>0.85</td>
-                <td>N/A</td>
-                <td>N/A</td>
-            </tr>
-            
-            <tr>
-                <td>General Hospital Ikorodu</td>
-                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'General Hospital Ikorodu')">T.O.S. Benson Road, Ikorodu, Lagos, Nigeria</span></td>
-                <td>Emergency, Maternity, Pediatrics, Cardiology, Orthopedics, Radiology, Blood Bank, Dental</td>
-                <td>Low</td>
+                <td>Continental Hospital & Maternity</td>
+                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Continental Hospital & Maternity')">11 Ago Owu Street, Onipanu</span></td>
+                <td>Maternity Care, Surgical Services</td>
+                <td>Medium</td>
                 <td>3</td>
                 <td>0.85</td>
                 <td>N/A</td>
@@ -50,12 +40,23 @@
             </tr>
             
             <tr>
-                <td>Aruna Ogun Memorial Specialist Hospital</td>
-                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Aruna Ogun Memorial Specialist Hospital')">3/4 Bamimosu Street, Ebute, Ikorodu</span></td>
-                <td>Surgical Services, Pediatric Care</td>
+                <td>Badamus Hospital</td>
+                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Badamus Hospital')">Lagos Airport Road</span></td>
+                <td>Emergency Medicine, Surgical Services</td>
                 <td>Medium</td>
-                <td>4</td>
-                <td>0.656</td>
+                <td>3</td>
+                <td>0.85</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            
+            <tr>
+                <td>Badagari General Hospital</td>
+                <td><span class="address-link" onclick="panToHospital(6.5244, 3.3792, 'Badagari General Hospital')">Badagry</span></td>
+                <td>General Medical Services</td>
+                <td>Low</td>
+                <td>3</td>
+                <td>0.85</td>
                 <td>N/A</td>
                 <td>N/A</td>
             </tr>
@@ -65,89 +66,63 @@
             let map;
             let markers = [];
             function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 6.5244, lng: 3.3792},
-                    zoom: 12
-                });
+                map = L.map('map').setView([{ center_lat }, { center_lng }], 12);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
                 
-                const marker = new google.maps.Marker({
-                    position: {lat: 6.5244, lng: 3.3792},
-                    map: map,
-                    title: 'Toun Memorial Specialist Hospital'
-                });
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `
+                const marker = L.marker([6.5244, 3.3792]).addTo(map)
+                    .bindPopup(`
                         <div>
-                            <h3>Toun Memorial Specialist Hospital</h3>
-                            <p><strong>Address:</strong> Ikorodu, Lagos</p>
-                            <p><strong>Services:</strong> Multispecialty Care, Surgical Services</p>
-                            <p><strong>Cost Level:</strong> High</p>
-                            <p><strong>Quality Score:</strong> 4</p>
+                            <h3>Continental Hospital & Maternity</h3>
+                            <p><strong>Address:</strong> 11 Ago Owu Street, Onipanu</p>
+                            <p><strong>Services:</strong> Maternity Care, Surgical Services</p>
+                            <p><strong>Cost Level:</strong> Medium</p>
+                            <p><strong>Quality Score:</strong> 3</p>
                             <p><strong>Recommendation Score:</strong> 0.85</p>
                         </div>
-                    `
-                });
-                marker.addListener('click', () => {
-                    infoWindow.open(map, marker);
-                });
-                markers.push({marker: marker, infoWindow: infoWindow});
+                    `);
+                markers.push({marker: marker, name: 'Continental Hospital & Maternity'});
                 
-                const marker = new google.maps.Marker({
-                    position: {lat: 6.5244, lng: 3.3792},
-                    map: map,
-                    title: 'General Hospital Ikorodu'
-                });
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `
+                const marker = L.marker([6.5244, 3.3792]).addTo(map)
+                    .bindPopup(`
                         <div>
-                            <h3>General Hospital Ikorodu</h3>
-                            <p><strong>Address:</strong> T.O.S. Benson Road, Ikorodu, Lagos, Nigeria</p>
-                            <p><strong>Services:</strong> Emergency, Maternity, Pediatrics, Cardiology, Orthopedics, Radiology, Blood Bank, Dental</p>
+                            <h3>Badamus Hospital</h3>
+                            <p><strong>Address:</strong> Lagos Airport Road</p>
+                            <p><strong>Services:</strong> Emergency Medicine, Surgical Services</p>
+                            <p><strong>Cost Level:</strong> Medium</p>
+                            <p><strong>Quality Score:</strong> 3</p>
+                            <p><strong>Recommendation Score:</strong> 0.85</p>
+                        </div>
+                    `);
+                markers.push({marker: marker, name: 'Badamus Hospital'});
+                
+                const marker = L.marker([6.5244, 3.3792]).addTo(map)
+                    .bindPopup(`
+                        <div>
+                            <h3>Badagari General Hospital</h3>
+                            <p><strong>Address:</strong> Badagry</p>
+                            <p><strong>Services:</strong> General Medical Services</p>
                             <p><strong>Cost Level:</strong> Low</p>
                             <p><strong>Quality Score:</strong> 3</p>
                             <p><strong>Recommendation Score:</strong> 0.85</p>
                         </div>
-                    `
-                });
-                marker.addListener('click', () => {
-                    infoWindow.open(map, marker);
-                });
-                markers.push({marker: marker, infoWindow: infoWindow});
-                
-                const marker = new google.maps.Marker({
-                    position: {lat: 6.5244, lng: 3.3792},
-                    map: map,
-                    title: 'Aruna Ogun Memorial Specialist Hospital'
-                });
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `
-                        <div>
-                            <h3>Aruna Ogun Memorial Specialist Hospital</h3>
-                            <p><strong>Address:</strong> 3/4 Bamimosu Street, Ebute, Ikorodu</p>
-                            <p><strong>Services:</strong> Surgical Services, Pediatric Care</p>
-                            <p><strong>Cost Level:</strong> Medium</p>
-                            <p><strong>Quality Score:</strong> 4</p>
-                            <p><strong>Recommendation Score:</strong> 0.656</p>
-                        </div>
-                    `
-                });
-                marker.addListener('click', () => {
-                    infoWindow.open(map, marker);
-                });
-                markers.push({marker: marker, infoWindow: infoWindow});
+                    `);
+                markers.push({marker: marker, name: 'Badagari General Hospital'});
                 
             }
             function panToHospital(lat, lng, name) {
-                map.setCenter({lat: lat, lng: lng});
-                map.setZoom(15);
+                map.setView([lat, lng], 15);
                 markers.forEach(m => {
-                    if (m.marker.getTitle() === name) {
-                        m.infoWindow.open(map, m.marker);
+                    if (m.name === name) {
+                        m.marker.openPopup();
                     } else {
-                        m.infoWindow.close();
+                        m.marker.closePopup();
                     }
                 });
             }
+            window.onload = initMap;
         </script>
     </body>
     </html>
