@@ -2,6 +2,7 @@
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -42,6 +43,8 @@ class RecommendationResponse(BaseModel):
     route_distance: str | None
     route_duration: str | None
     route_instructions: str | None
+    latitude: float | None = None
+    longitude: float | None = None
 
 # === API ROUTES ===
 @app.get("/health")
@@ -94,16 +97,19 @@ async def get_recommendations(request: RecommendationRequest):
                 recommendation_score=row["Recommendation_Score"],
                 route_distance=row.get("Route_Distance"),
                 route_duration=row.get("Route_Duration"),
-                route_instructions=row.get("Route_Instructions")
+                route_instructions=row.get("Route_Instructions"),
+                latitude=row["Coordinates"][0] if "Coordinates" in row and row["Coordinates"] else None,
+                longitude=row["Coordinates"][1] if "Coordinates" in row and row["Coordinates"] else None,
             )
             for _, row in recommendations.iterrows()
         ]
 
-        map_url = f"/map" if map_file else None
-        return {"recommendations": response, "map_url": map_url}
+       
+        return {"recommendations": response}
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing request: {str(e)}")
+    
 
 # === SERVE FRONTEND BUILD ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

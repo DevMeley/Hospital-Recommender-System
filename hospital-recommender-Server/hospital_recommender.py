@@ -1,5 +1,3 @@
-# recommender.py
-
 import pandas as pd
 import numpy as np
 import skfuzzy as fuzz
@@ -7,35 +5,31 @@ from skfuzzy import control as ctrl
 import os
 import logging
 import re
-from math import radians, sin, cos, sqrt, atan2
-import requests
-from jinja2 import Template
-from typing import Tuple, Optional, Dict
+from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
+import matplotlib.pyplot as plt
+import folium
 
 # Setup logging
-logging.basicConfig(filename='hospital_recommender.log', level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='hospital_recommender.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 # Default coordinates (Lagos center)
 DEFAULT_COORDS = (6.5244, 3.3792)
 
-# Maximum distance threshold for proximity (in km)
-MAX_DISTANCE = 15.0
-
-def get_valid_category(value: str, default: str) -> str:
-    """Validate and normalize category input."""
+def get_valid_category(value, default):
     valid_options = {"low", "medium", "high"}
     value = value.strip().lower() if value else default.lower()
-    return value.capitalize() if value in valid_options else default.capitalize()
+    if value in valid_options:
+        return value.capitalize()
+    logger.warning(f'Invalid input "{value}". Using default: {default}')
+    return default.capitalize()
 
-def map_preference_to_value(pref: str) -> float:
-    """Map preference to a normalized value."""
+def map_preference_to_value(pref):
     pref_map = {"Low": 0.33, "Medium": 0.66, "High": 1.0}
     return pref_map.get(pref, 0.33)
 
-def compute_service_match(user_service: str, hospital_services: str) -> float:
-    """Compute service match score with detailed logic."""
+def compute_service_match(user_service, hospital_services):
     if pd.isna(hospital_services) or pd.isna(user_service):
         logger.warning('Missing service data')
         return 0.0
@@ -43,14 +37,14 @@ def compute_service_match(user_service: str, hospital_services: str) -> float:
     hospital_services = hospital_services.lower().strip()
     hospital_service_list = [s.strip() for s in hospital_services.split(',')]
     if user_service == 'surgery':
-        if any(svc in hospital_service_list for svc in ['surgery', 'surgical services']):
-            if not any(exc in hospital_service_list for exc in ['dental surgery', 'oral surgery', 'cosmetic surgery']):
+        if 'surgery' in hospital_service_list or 'surgical services' in hospital_service_list:
+            if all(svc not in hospital_service_list for svc in ['dental surgery', 'oral surgery', 'cosmetic surgery']):
                 logger.info(f'Exact match for "surgery" in {hospital_service_list}')
                 return 1.0
-            logger.info(f'Excluded mismatch for "surgery" in {hospital_service_list}')
-            return 0.0
-        elif any('surgery' in svc and not any(exc in svc for exc in ['dental', 'oral', 'cosmetic']) 
-                 for svc in hospital_service_list):
+            else:
+                logger.info(f'Excluded mismatch for "surgery" in {hospital_service_list}')
+                return 0.0
+        elif any('surgery' in svc and 'dental' not in svc and 'oral' not in svc and 'cosmetic' not in svc for svc in hospital_service_list):
             logger.info(f'Partial match for "surgery" in {hospital_service_list}')
             return 0.95
         logger.info(f'No match for "surgery" in {hospital_service_list}')
@@ -67,25 +61,22 @@ def compute_service_match(user_service: str, hospital_services: str) -> float:
     logger.info(f'No match for "{user_service}" in {hospital_service_list}')
     return 0.0
 
-def map_cost_rating(cost_rating: str) -> float:
-    """Map cost rating to a numerical value."""
+def map_cost_rating(cost_rating):
     if pd.isna(cost_rating) or cost_rating == 'N/A':
         return 1.0
     cost_map = {"Low": 1.0, "Medium": 2.0, "High": 3.0, "Premium": 3.0}
     return cost_map.get(cost_rating.strip().capitalize(), 1.0)
 
-def load_geocode_cache(cache_file: str = "hospital_coordinates.csv") -> dict:
-    """Load geocoding cache from CSV."""
+def load_geocode_cache(cache_file="hospital_coordinates.csv"):
     if os.path.exists(cache_file):
         try:
-            cache = pd.read_csv(cache_file, index_col="Address").to_dict()["Coordinates"]
-            return {k: v for k, v in cache.items() if v != "None"}
+            cache = pd.read_csv(cache_file, index_col="Address")
+            return cache.to_dict()["Coordinates"]
         except Exception as e:
             logger.error(f"Error loading cache: {e}")
     return {}
 
-def save_geocode_cache(cache: dict, cache_file: str = "hospital_coordinates.csv") -> None:
-    """Save geocoding cache to CSV."""
+def save_geocode_cache(cache, cache_file="hospital_coordinates.csv"):
     try:
         cache_df = pd.DataFrame.from_dict(cache, orient="index", columns=["Coordinates"])
         cache_df.index.name = "Address"
@@ -93,49 +84,46 @@ def save_geocode_cache(cache: dict, cache_file: str = "hospital_coordinates.csv"
     except Exception as e:
         logger.error(f"Error saving cache: {e}")
 
-def geocode_address(address: str, cache: dict) -> tuple:
-    """Geocode an address using Nominatim with caching."""
-    if address in cache:
-        coords_str = cache[address]
+def geocode_address(address, cache):
+    if address in cache and cache[address] != "None":
         try:
-            lat, lon = map(float, coords_str.strip("()").split(","))
+            # Use cached coordinates if valid
+            lat, lon = map(float, cache[address].strip('()').split(','))
+            logger.info(f"Using cached coordinates for {address}: {cache[address]}")
             return (lat, lon)
-        except:
-            logger.warning(f"Invalid cached coordinates for '{address}'. Re-geocoding.")
-
+        except (ValueError, AttributeError):
+            logger.warning(f"Cached coordinates for '{address}' are invalid. Re-geocoding.")
+    # Geocode anew if not in cache or invalid
     try:
-        url = f"https://nominatim.openstreetmap.org/search?format=json&q={address}, Lagos, Nigeria"
-        headers = {'User-Agent': 'HospitalRecommender/1.0 (your.email@example.com)'}  # Replace with your contact
-        response = requests.get(url, headers=headers, timeout=5)
-        response.raise_for_status()
-        if response.json():
-            location = response.json()[0]
-            coords = (float(location["lat"]), float(location["lon"]))
+        geolocator = Nominatim(user_agent="hospital_recommender")
+        full_address = f"{address}, Lagos, Nigeria"
+        location = geolocator.geocode(full_address)
+        if location:
+            coords = (location.latitude, location.longitude)
             cache[address] = f"({coords[0]},{coords[1]})"
             save_geocode_cache(cache)
             return coords
-        logger.warning(f"No coordinates found for '{address}'")
         cache[address] = "None"
-        save_geocode_cache(cache)
         return DEFAULT_COORDS
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         logger.error(f"Geocoding error for '{address}': {e}")
         cache[address] = "None"
-        save_geocode_cache(cache)
         return DEFAULT_COORDS
 
-def haversine_distance(coord1: tuple, coord2: tuple) -> float:
-    """Calculate straight-line distance between two coordinates in kilometers."""
-    lat1, lon1 = radians(coord1[0]), radians(coord1[1])
-    lat2, lon2 = radians(coord2[0]), radians(coord2[1])
-    dlat = lat2 - lat1
-    dlon = lon2 - lon1
-    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-    c = 2 * atan2(sqrt(a), sqrt(1-a))
-    return 6371 * c  # Earth radius in kilometers
+def get_driving_route(user_coords, hospital_coords, hospital_name):
+    if user_coords == DEFAULT_COORDS or hospital_coords == DEFAULT_COORDS:
+        return None, None, None
+    try:
+        distance = geodesic(user_coords, hospital_coords).km
+        duration = distance / 30 * 3600  # Estimate: 30 km/h in Lagos
+        duration_text = f"{int(duration // 3600)}h {int((duration % 3600) // 60)}m"
+        distance_text = f"{distance:.1f} km"
+        return distance_text, duration_text, "Estimated driving route"
+    except Exception as e:
+        logger.error(f"Error estimating route to {hospital_name}: {e}")
+        return None, None, None
 
-def extract_city(address: str) -> str:
-    """Extract city from address using regex."""
+def extract_city(address):
     cities = (
         r'Ikorodu|Ikoyi|Ikeja|Victoria Island|Surulere|Badagry|Lagos Island|Agege|'
         r'Alimosho|Apapa|Epe|Eti-Osa|Ibeju-Lekki|Ifako-Ijaiye|Kosofe|Lagos Mainland|'
@@ -145,267 +133,229 @@ def extract_city(address: str) -> str:
         r'Alagbado|Ojodu|Iju|Akoka|Somolu|Agidingbi|Ogba|Isheri|Agbara|Ijanikin'
     )
     match = re.search(f'({cities})', address, re.IGNORECASE)
-    return match.group(1).lower() if match else 'unknown'
+    if match:
+        return match.group(1).lower()
+    last_phrase = address.split(',')[-1].strip().lower()
+    if last_phrase in ['lagos', 'nigeria', 'state', 'lga', 'unknown', '']:
+        return 'unknown'
+    return last_phrase
 
-def generate_map_html(recommendations: pd.DataFrame, user_coords: tuple, user_service: str, location: str) -> str:
-    """Generate HTML with an interactive OpenStreetMap using Leaflet, including static markers."""
-    # Fallback to static locations if recommendations are empty or for simplicity
-    if recommendations.empty:
-        logger.warning("No recommendations available, using static locations")
-        static_locations = [
-            {"name": "Aruna Ogun Memorial Specialist Hospital", "lat": 6.6191, "lng": 3.5105},
-            {"name": "Ikeja General Hospital", "lat": 6.5982, "lng": 3.3392},
-            {"name": "Lagos Island General Hospital", "lat": 6.4474, "lng": 3.3922}
-        ]
-    else:
-        static_locations = [
-            {"name": row["Name"], "lat": row["Coordinates"][0], "lng": row["Coordinates"][1]}
-            for _, row in recommendations.head(3).iterrows()
-        ]
-
-    center_lat, center_lng = user_coords if user_coords != DEFAULT_COORDS else 6.5244, 3.3792
-    
-    template = Template("""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Hospital Recommendations Map</title>
-        <style>
-            #map { height: 500px; width: 100%; }
-            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-            th { background-color: #f2f2f2; }
-            .address-link { color: blue; cursor: pointer; text-decoration: underline; }
-        </style>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    </head>
-    <body>
-        <h2>Recommended Hospitals for {{ service }} in {{ location }}</h2>
-        <div id="map"></div>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Services</th>
-                <th>Cost Level</th>
-                <th>Quality Score</th>
-                <th>Recommendation Score</th>
-            </tr>
-            {% if recommendations %}
-                {% for rec in recommendations %}
-                <tr>
-                    <td>{{ rec.Name }}</td>
-                    <td><span class="address-link" onclick="panToHospital({{ rec.Coordinates[0] }}, {{ rec.Coordinates[1] }}, '{{ rec.Name | replace("'", "\\'") }}')">{{ rec.Full Address }}</span></td>
-                    <td>{{ rec.Services }}</td>
-                    <td>{{ rec.Cost Level }}</td>
-                    <td>{{ rec.Quality Score }}</td>
-                    <td>{{ rec.Recommendation_Score }}</td>
-                </tr>
-                {% endfor %}
-            {% else %}
-                <tr><td colspan="6">No recommendations available.</td></tr>
-            {% endif %}
-        </table>
-        <script>
-            let map = L.map('map').setView([{ center_lat }, { center_lng }], 10);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            let markers = [];
-            {% for loc in static_locations %}
-            let marker = L.marker([{{ loc.lat }}, {{ loc.lng }}]).addTo(map)
-                .bindPopup(`<b>{{ loc.name | replace("'", "\\'") }}</b>`);
-            markers.push({marker: marker, name: '{{ loc.name | replace("'", "\\'") }}'});
-            {% endfor %}
-            function panToHospital(lat, lng, name) {
-                map.setView([lat, lng], 15);
-                markers.forEach(m => {
-                    if (m.name === name) m.marker.openPopup();
-                    else m.marker.closePopup();
-                });
-            }
-        </script>
-    </body>
-    </html>
-    """)
-    
-    html_content = template.render(
-        recommendations=recommendations.to_dict(orient='records') if not recommendations.empty else None,
-        static_locations=static_locations,
-        service=user_service,
-        location=location or "Lagos",
-        center_lat=center_lat,
-        center_lng=center_lng
-    )
-    
-    return html_content  # Return HTML content instead of file path
-
-def setup_fuzzy_system() -> ctrl.ControlSystemSimulation:
-    """Set up the fuzzy logic system with all 36 rules."""
+def setup_fuzzy_system():
     cost = ctrl.Antecedent(np.arange(1, 3.1, 0.1), 'cost')
     quality = ctrl.Antecedent(np.arange(2, 5.1, 0.1), 'quality')
     service_match = ctrl.Antecedent(np.arange(0, 1.01, 0.01), 'service_match')
-    proximity_match = ctrl.Antecedent(np.arange(0, 1.01, 0.01), 'proximity_match')
+    location_match = ctrl.Antecedent(np.arange(0, 1.01, 0.01), 'location_match')
     recommendation = ctrl.Consequent(np.arange(0, 1.01, 0.01), 'recommendation')
 
-    # Membership functions
     cost['low'] = fuzz.trimf(cost.universe, [1, 1, 1.5])
-    cost['medium'] = fuzz.trimf(cost.universe, [1.2, 1.75, 2.5])
-    cost['high'] = fuzz.trimf(cost.universe, [2, 2.5, 3])
-    cost['premium'] = fuzz.trimf(cost.universe, [2.5, 3, 3])
+    cost['medium'] = fuzz.trimf(cost.universe, [1.2, 1.5, 2])
+    cost['high'] = fuzz.trimf(cost.universe, [1.5, 2, 2.5])
+    cost['premium'] = fuzz.trimf(cost.universe, [2, 3, 3])
 
     quality['low'] = fuzz.trimf(quality.universe, [2, 2, 3])
-    quality['medium'] = fuzz.trimf(quality.universe, [2.5, 3.5, 4.5])
-    quality['high'] = fuzz.trimf(quality.universe, [4, 4.5, 5])
+    quality['medium'] = fuzz.trimf(quality.universe, [2.5, 3, 4])
+    quality['high'] = fuzz.trimf(quality.universe, [3.5, 4.5, 5])
 
-    service_match['low'] = fuzz.trimf(service_match.universe, [0, 0, 0.4])
-    service_match['medium'] = fuzz.trimf(service_match.universe, [0.3, 0.6, 0.8])
-    service_match['high'] = fuzz.trimf(service_match.universe, [0.7, 1, 1])
+    service_match['low'] = fuzz.trimf(service_match.universe, [0, 0, 0.3])
+    service_match['medium'] = fuzz.trimf(service_match.universe, [0.2, 0.5, 0.7])
+    service_match['high'] = fuzz.trimf(service_match.universe, [0.6, 1, 1])
 
-    proximity_match['far'] = fuzz.trimf(proximity_match.universe, [0, 0, 0.3])
-    proximity_match['medium'] = fuzz.trimf(proximity_match.universe, [0.2, 0.5, 0.8])
-    proximity_match['close'] = fuzz.trimf(proximity_match.universe, [0.7, 1, 1])
+    location_match['low'] = fuzz.trimf(location_match.universe, [0, 0, 0.5])
+    location_match['medium'] = fuzz.trimf(location_match.universe, [0.3, 0.5, 0.7])
+    location_match['high'] = fuzz.trimf(location_match.universe, [0.5, 1, 1])
 
     recommendation['low'] = fuzz.trimf(recommendation.universe, [0, 0, 0.4])
-    recommendation['medium'] = fuzz.trimf(recommendation.universe, [0.3, 0.6, 0.8])
-    recommendation['high'] = fuzz.trimf(recommendation.universe, [0.7, 0.9, 1])
+    recommendation['medium'] = fuzz.trimf(recommendation.universe, [0.3, 0.5, 0.6])
+    recommendation['high'] = fuzz.trimf(recommendation.universe, [0.7, 0.85, 1])
 
-    # All 36 fuzzy rules
     rules = [
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['close'] & quality['high'], recommendation['high']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['close'] & quality['medium'], recommendation['high']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['close'] & quality['low'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['medium'] & quality['high'], recommendation['high']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['medium'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['medium'] & quality['low'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['far'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['high'] & proximity_match['far'] & quality['medium'], recommendation['low']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['close'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['close'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['close'] & quality['low'], recommendation['low']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['medium'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['medium'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['medium'] & quality['low'], recommendation['low']),
-        ctrl.Rule(cost['low'] & service_match['medium'] & proximity_match['far'] & quality['high'], recommendation['low']),
-        ctrl.Rule(cost['low'] & service_match['low'] & proximity_match['close'] & quality['high'], recommendation['low']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['close'] & quality['high'], recommendation['high']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['close'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['close'] & quality['low'], recommendation['medium']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['medium'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['medium'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['medium'] & quality['low'], recommendation['low']),
-        ctrl.Rule(cost['medium'] & service_match['high'] & proximity_match['far'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['medium'] & service_match['medium'] & proximity_match['close'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['medium'] & service_match['medium'] & proximity_match['close'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['high'] & service_match['high'] & proximity_match['close'] & quality['high'], recommendation['high']),
-        ctrl.Rule(cost['high'] & service_match['high'] & proximity_match['close'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['high'] & service_match['high'] & proximity_match['close'] & quality['low'], recommendation['medium']),
-        ctrl.Rule(cost['high'] & service_match['high'] & proximity_match['medium'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['high'] & service_match['high'] & proximity_match['medium'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['high'] & service_match['medium'] & proximity_match['close'] & quality['high'], recommendation['medium']),
-        ctrl.Rule(cost['high'] & service_match['medium'] & proximity_match['close'] & quality['medium'], recommendation['medium']),
-        ctrl.Rule(cost['premium'] & service_match['high'] & proximity_match['close'] & quality['high'], recommendation['high']),
-        ctrl.Rule(cost['premium'] & service_match['high'] & proximity_match['close'] & quality['medium'], recommendation['high']),
-        ctrl.Rule(cost['premium'] & service_match['high'] & proximity_match['medium'] & quality['high'], recommendation['high']),
-        ctrl.Rule(cost['premium'] & service_match['medium'] & proximity_match['close'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['low'] & service_match['high'] & location_match['high'] & quality['high'], recommendation['high']),
+        ctrl.Rule(cost['low'] & service_match['high'] & location_match['high'] & quality['medium'], recommendation['high']),
+        ctrl.Rule(cost['low'] & service_match['high'] & location_match['medium'] & quality['high'], recommendation['high']),
+        ctrl.Rule(cost['low'] & service_match['medium'] & location_match['high'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['low'] & service_match['medium'] & location_match['medium'] & quality['medium'], recommendation['medium']),
+        ctrl.Rule(cost['low'] & (service_match['low'] | location_match['low']) & quality['high'], recommendation['low']),
+        ctrl.Rule(cost['low'] & service_match['low'] & location_match['low'] & quality['low'], recommendation['low']),
+        ctrl.Rule(cost['medium'] & service_match['high'] & location_match['high'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['medium'] & service_match['high'] & location_match['high'] & quality['medium'], recommendation['high']),
+        ctrl.Rule(cost['medium'] & service_match['high'] & location_match['medium'] & quality['high'], recommendation['high']),
+        ctrl.Rule(cost['medium'] & service_match['medium'] & location_match['high'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['medium'] & service_match['medium'] & location_match['medium'] & quality['medium'], recommendation['medium']),
+        ctrl.Rule(cost['medium'] & (service_match['low'] | location_match['low']) & quality['high'], recommendation['low']),
+        ctrl.Rule(cost['medium'] & service_match['low'] & location_match['low'] & quality['low'], recommendation['low']),
+        ctrl.Rule(cost['high'] & service_match['high'] & location_match['high'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['high'] & service_match['high'] & location_match['high'] & quality['medium'], recommendation['high']),
+        ctrl.Rule(cost['high'] & service_match['high'] & location_match['medium'] & quality['high'], recommendation['high']),
+        ctrl.Rule(cost['high'] & service_match['medium'] & location_match['high'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['high'] & service_match['medium'] & location_match['medium'] & quality['medium'], recommendation['medium']),
+        ctrl.Rule(cost['high'] & (service_match['low'] | location_match['low']) & quality['high'], recommendation['low']),
+        ctrl.Rule(cost['high'] & service_match['low'] & location_match['low'] & quality['low'], recommendation['low']),
+        ctrl.Rule(cost['premium'] & service_match['high'] & location_match['high'] & quality['high'], recommendation['high']),
+        ctrl.Rule(cost['premium'] & service_match['high'] & location_match['high'] & quality['medium'], recommendation['high']),
+        ctrl.Rule(cost['premium'] & service_match['high'] & location_match['medium'] & quality['high'], recommendation['high']),
+        ctrl.Rule(cost['premium'] & service_match['medium'] & location_match['high'] & quality['high'], recommendation['medium']),
+        ctrl.Rule(cost['premium'] & service_match['medium'] & location_match['medium'] & quality['medium'], recommendation['medium']),
+        ctrl.Rule(cost['premium'] & (service_match['low'] | location_match['low']) & quality['high'], recommendation['low']),
+        ctrl.Rule(cost['premium'] & service_match['low'] & location_match['low'] & quality['low'], recommendation['low'])
     ]
 
     recommender_ctrl = ctrl.ControlSystem(rules)
     return ctrl.ControlSystemSimulation(recommender_ctrl)
 
-def compute_recommendation_score(row: pd.Series, user_service: str, user_cost_pref: str, 
-                               user_quality_pref: str, fuzzy_system: ctrl.ControlSystemSimulation, 
-                               user_coords: tuple) -> float:
-    """Compute recommendation score using fuzzy logic."""
+def compute_recommendation_score(row, user_service, user_cost_pref, user_quality_pref, fuzzy_system):
     try:
         service_score = compute_service_match(user_service, row["Services"])
         cost_value = map_cost_rating(row["Cost Level"])
         quality_value = float(row["Quality Score"]) if pd.notna(row["Quality Score"]) else 3.0
-        hospital_coords = row["Coordinates"]
-        distance = haversine_distance(user_coords, hospital_coords)
-        proximity_score = max(0, 1 - min(distance / MAX_DISTANCE, 1))
+        location_score = row["Location_Match"]
 
         fuzzy_system.input["cost"] = cost_value
         fuzzy_system.input["quality"] = quality_value
         fuzzy_system.input["service_match"] = service_score
-        fuzzy_system.input["proximity_match"] = proximity_score
+        fuzzy_system.input["location_match"] = location_score
 
         fuzzy_system.compute()
         score = fuzzy_system.output.get("recommendation", 0.0)
-        logger.info(f"Hospital: {row['Name']}, Service: {service_score:.2f}, Proximity: {proximity_score:.2f}, "
-                    f"Cost: {cost_value:.2f}, Quality: {quality_value:.2f}, Score: {score:.3f}")
+        logger.info(f"Hospital: {row['Name']}, Service Match: {service_score:.2f}, Location Match: {location_score:.2f}, Cost: {cost_value:.2f}, Quality: {quality_value:.2f}, Score: {score:.3f}")
         return score
     except Exception as e:
         logger.error(f"Error processing {row['Name']}: {e}")
         return 0.0
 
-def recommend_hospitals(location: str, user_service: str, cost_pref_str: str, 
-                      quality_pref_str: str) -> Tuple[pd.DataFrame, str]:
+
+def plot_map(recommendations):
+    if recommendations.empty:
+        print("No hospitals to display on the map.")
+        return
+
+    coordinates = []
+    for coord in recommendations['Coordinates']:
+        # Accept tuple/list of floats, or parse from string if needed
+        if isinstance(coord, (tuple, list)) and len(coord) == 2:
+            try:
+                lat, lng = float(coord[0]), float(coord[1])
+                coordinates.append((lat, lng))
+            except Exception:
+                print(f"Skipping invalid coordinate: {coord}")
+        elif isinstance(coord, str):
+            try:
+                lat, lng = map(float, coord.strip('()').split(','))
+                coordinates.append((lat, lng))
+            except Exception:
+                print(f"Skipping invalid coordinate: {coord}")
+        else:
+            print(f"Skipping invalid coordinate: {coord}")
+
+    if not coordinates:
+        print("Error: No valid coordinates found in the recommendations.")
+        return
+
+    map_center = coordinates[0]
+    m = folium.Map(location=map_center, zoom_start=12)
+
+    for idx, (coord, row) in enumerate(zip(coordinates, recommendations.itertuples())):
+        folium.Marker(
+            location=coord,
+            popup=f"Name: {getattr(row, 'Name', 'Unknown Hospital')}<br>Score: {getattr(row, 'Recommendation_Score', 'N/A'):.2f}",
+            icon=folium.Icon(color='blue', icon='hospital')
+        ).add_to(m)
+
+    map_path = 'hospital_map.html'
+    m.save(map_path)
+    print("Map saved as hospital_map.html for frontend integration.")
+    return map_path
+
+def recommend_hospitals(location, user_service, cost_pref_str, quality_pref_str):
     """
-    Generate hospital recommendations with an embedded map.
+    Generate hospital recommendations based on user inputs.
     
     Args:
-        location (str): User-provided address or city
-        user_service (str): Desired service
-        cost_pref_str (str): Cost preference
-        quality_pref_str (str): Quality preference
+        location (str): Preferred city or address (e.g., 'Ikorodu')
+        user_service (str): Desired service (e.g., 'Surgery')
+        cost_pref_str (str): Cost preference ('Low', 'Medium', 'High')
+        quality_pref_str (str): Quality preference ('Low', 'Medium', 'High')
     
     Returns:
-        tuple: (pd.DataFrame of recommendations, HTML content with map)
+        tuple: (pd.DataFrame of recommendations, str path to map file)
     """
     try:
-        logger.info(f"Loading dataset Lagos_hospital.csv for location: {location}")
+        logger.info("Loading dataset Lagos_hospital.csv")
         dataset_path = "Lagos_hospital.csv"
         if not os.path.exists(dataset_path):
             logger.error(f"Dataset not found at {dataset_path}")
             raise FileNotFoundError(f"Dataset not found at {dataset_path}")
-
         data = pd.read_csv(dataset_path)
-        required_columns = ["Name", "Full Address", "Services", "Cost Level", "Quality Score"]
-        if not all(col in data.columns for col in required_columns):
-            missing = [col for col in required_columns if col not in data.columns]
-            logger.error(f"Missing columns in dataset: {missing}")
-            raise ValueError(f"Dataset missing columns: {missing}")
-
-        data = data.dropna(subset=required_columns)
+        data = data.dropna(subset=["Name", "Services", "Cost Level", "Quality Score", "User Rating"])
+        data["Full Address"] = data["Full Address"].fillna("Unknown")
         data["Quality Score"] = pd.to_numeric(data["Quality Score"], errors="coerce").fillna(3.0)
+        data["User Rating"] = pd.to_numeric(data["User Rating"], errors="coerce").fillna(3.0)
 
         cost_pref_str = get_valid_category(cost_pref_str, "Medium")
         quality_pref_str = get_valid_category(quality_pref_str, "High")
+        cost_pref_value = map_preference_to_value(cost_pref_str)
+        quality_pref_value = map_preference_to_value(quality_pref_str)
 
-        # Geocode user location
-        geocode_cache = load_geocode_cache()
+        # Extract user city from location
+        user_city = extract_city(location)
+        logger.info(f"User city extracted: {user_city}")
+
+        # Extract hospital cities
+        data["City"] = data["Full Address"].apply(extract_city)
+        logger.info(f"Unique hospital cities: {data['City'].unique()}")
+
+        # Compute Location_Match
+        data["Location_Match"] = data["City"].apply(lambda city: 1.0 if city.lower() == user_city.lower() else 0.0)
+        data = data[data["Location_Match"] == 1.0]
+        if data.empty:
+            logger.warning(f"No hospitals found in city '{user_city}'")
+            return pd.DataFrame(), None
+
+        # Geocode for routing and map
+        cache_file = "hospital_coordinates.csv"
+        geocode_cache = load_geocode_cache(cache_file)
         user_coords = geocode_address(location, geocode_cache)
-
-        # Geocode hospital addresses
         data["Coordinates"] = data["Full Address"].apply(lambda addr: geocode_address(addr, geocode_cache))
-        save_geocode_cache(geocode_cache)
+        save_geocode_cache(geocode_cache, cache_file)
 
         fuzzy_system = setup_fuzzy_system()
         data["Recommendation_Score"] = data.apply(
-            lambda row: compute_recommendation_score(row, user_service, cost_pref_str, quality_pref_str, 
-                                                  fuzzy_system, user_coords), axis=1
+            lambda row: compute_recommendation_score(row, user_service, cost_pref_str, quality_pref_str, fuzzy_system),
+            axis=1
         )
 
         recommendations = data[data["Recommendation_Score"] > 0].copy()
         if recommendations.empty:
-            logger.warning(f"No hospitals found matching service '{user_service}' near '{location}'")
-            recommendations = pd.DataFrame()  # Empty DataFrame for fallback
+            logger.warning(f"No hospitals found matching service '{user_service}'")
+            return pd.DataFrame(), None
 
         recommendations = recommendations.sort_values(by="Recommendation_Score", ascending=False).head(3)
 
-        # Generate HTML with embedded map
-        map_html = generate_map_html(recommendations, user_coords, user_service, location or "Lagos")
+        # Add routing information
+        for idx, row in recommendations.iterrows():
+            distance, duration, instructions = get_driving_route(
+                user_coords, row["Coordinates"], row["Name"]
+            )
+            recommendations.at[idx, "Route_Distance"] = distance
+            recommendations.at[idx, "Route_Duration"] = duration
+            recommendations.at[idx, "Route_Instructions"] = instructions if instructions else "N/A"
 
         recommendations.to_csv("recommended_hospitals.csv", index=False)
         logger.info("Recommendations saved to recommended_hospitals.csv")
 
+        # Generate visualizations
+        map_file = plot_map(recommendations)
+
         return recommendations[
-            ["Name", "Full Address", "Services", "Cost Level", "Quality Score", "Recommendation_Score"]
-        ], map_html
+            [
+                "Name", "Full Address", "Services", "Cost Level", "Quality Score",
+                "Recommendation_Score", "Route_Distance", "Route_Duration", "Route_Instructions","Coordinates"
+            ]
+        ], map_file
     except Exception as e:
-        logger.error(f"Error in recommendation process: {e}")
-        return pd.DataFrame(), generate_map_html(pd.DataFrame(), DEFAULT_COORDS, user_service, location or "Lagos")
+        logger.error(f"Error in recommendation: {e}")
+        return pd.DataFrame(), None
+
+if __name__ == "__main__":
+    recs, map_file = recommend_hospitals("Ikeja", "general medicine", "Medium", "High")
+    print(f"Recommendations: {recs}")
+    print(f"Map file: {map_file}")

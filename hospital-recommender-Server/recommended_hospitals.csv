@@ -1,4 +1,4 @@
-Name,Full Address,Services,Cost Level,Quality Score,User Rating,City,Coordinates,Recommendation_Score,Route_Distance,Route_Duration,Route_Instructions
-Continental Hospital & Maternity,"11 Ago Owu Street, Onipanu","Maternity Care, Surgical Services",Medium,3,3.8,onipanu,"(6.5244, 3.3792)",0.8500000000000004,,,N/A
-Badamus Hospital,Lagos Airport Road,"Emergency Medicine, Surgical Services",Medium,3,3.7,lagos airport road,"(6.5244, 3.3792)",0.8500000000000004,,,N/A
-Badagari General Hospital,Badagry,General Medical Services,Low,3,3.2,badagry,"(6.5244, 3.3792)",0.8500000000000004,,,N/A
+Name,Full Address,Services,Cost Level,Quality Score,User Rating,City,Location_Match,Coordinates,Recommendation_Score,Route_Distance,Route_Duration,Route_Instructions
+Alheri Hospital,Ojodu,"Pediatric Medicine, General Surgery",Medium,3,3.8,ojo,1.0,"(6.637690699999999, 3.3558525)",0.85,6.6 km,0h 13m,Estimated driving route
+Solid Rock Hospital,"6 Akinsanya Street, Off Ogunnusi Road, Ojodu","General Medicine, Pediatrics, Minor Surgery",Medium,3,3.8,ojo,1.0,"(6.6420773, 3.3632993)",0.85,6.9 km,0h 13m,Estimated driving route
+Royan Hospital,"72 Aina Street, Ojodu, Ikeja, Lagos","Maternity Services, Pediatric Care, General Medicine",Medium,4,4.0,ojo,1.0,"(6.6443026, 3.3642001)",0.1555555555555555,7.1 km,0h 14m,Estimated driving route
