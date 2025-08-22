@@ -6363,3 +6363,235 @@
 2025-08-22 09:43:28,378 - INFO - No match for "surgery" in ['general practice', 'chronic care']
 2025-08-22 09:43:28,378 - INFO - Hospital: Living Hope Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
 2025-08-22 09:43:28,378 - INFO - Recommendations saved to recommended_hospitals.csv
+2025-08-22 10:13:58,886 - INFO - Loading dataset Lagos_hospital.csv
+2025-08-22 10:13:58,891 - INFO - User city extracted: ikeja
+2025-08-22 10:13:58,896 - INFO - Unique hospital cities: ['lagos island' 'gbagada' 'surulere' 'iju' 'idimu' 'ikeja' 'ikoyi' 'ipaja'
+ 'bariga' 'jibowu' 'appa' 'ojo' 'ajangbadi' 'ijesatedo' 'victoria island'
+ 'ifako-ijaiye' 'apapa' 'ikorodu' 'unknown' 'lagos airport road' 'badagry'
+ 'ilupeju' 'yaba' 'agege' 'egbe' 'ogba' 'ajah' 'off alake' 'mushin'
+ 'okomalam' 'onipanu' 'akowonjo' 'egbeda' 'ketu' 'fagba' 'akoka'
+ 'mafoluku-oshodi' 'ebute metta' 'iba' 'festac town' 'agbado' 'shogunle'
+ 'obalende' 'okota' 'lekki' 'isolo' 'idi-araba' 'igbobi' 'oshodi-isolo'
+ 'alagbado' 'epe' 'shomolu' 'lagos mainland']
+2025-08-22 10:13:58,899 - INFO - Using cached coordinates for ikeja: (6.5960605,3.340787)
+2025-08-22 10:13:58,899 - INFO - Using cached coordinates for Airport Road, Ikeja: (6.5866674,3.3335543)
+2025-08-22 10:13:58,899 - INFO - Using cached coordinates for Ikeja: (6.601838,3.3514863)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Alausa, Ikeja: (6.6211078,3.3609343)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 78 Adeniyi Jones, Ikeja: (6.6158937,3.3461922)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 11 Kodejoh Street, Ikeja: (6.595808099999999,3.3413732)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Ikeja HQ: (6.601838,3.3514863)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 23a Oduduwa Crescent, GRA Ikeja: (6.5748943,3.3552235)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Allen Avenue, Ikeja: (6.6017292,3.3520211)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Mobolaji Bank Anthony Way, Ikeja: (6.5851959,3.3578891)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Opebi Road, Ikeja: (6.5897006,3.361005)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Opebi Road, Ikeja: (6.5897006,3.361005)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 114 Riverside Crescent, Ikeja: (6.5738241,3.3616472)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 15 Hospital Road, Ikeja: (6.552666899999999,3.3884619)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Agindingbi, Ikeja: (6.623137799999999,3.356525)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Ikeja: (6.601838,3.3514863)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Olutoye Crescent, Ikeja: (6.6193291,3.3450505)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Balogun Street, Ikeja: (6.5990726,3.3360797)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Ikeja: (6.601838,3.3514863)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Allen Avenue, Ikeja: (6.6017292,3.3520211)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 15 Gbajobi Street, Ikeja: (6.6036709,3.3470616)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for Awolowo Road, Ikeja: (6.442053,3.4151489)
+2025-08-22 10:13:58,900 - INFO - Using cached coordinates for 39 Issac John Street, GRA, Ikeja, Lagos: (6.583444,3.3571321)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 166 Akowonjo Road, Ikeja, Lagos: (6.602241999999999,3.3085843)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 2 Salvation Road, Opebi-Ikeja, Lagos: (6.589314099999999,3.3617611)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 31 John Drive, Obafemi Awolowo Way, Ikeja: (6.6076393,3.3500225)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for Opebi, Ikeja, Lagos: (6.589373399999999,3.3613958)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 239 Adeola Santos Street, Ikeja: (6.4307526,3.4176328)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for Akeem Akonju Street, Ikeja, Lagos: (6.5762217,3.3858813)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 26 Bamishile Street, Off Allen Avenue, Ikeja: (6.5981068,3.3550521)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for Ikeja, Lagos: (6.601838,3.3514863)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 8 Abraham Road, Ikeja, Lagos: (6.441154399999999,3.3689462)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for 32 Unity Road, Ikeja, Lagos: (6.596757299999999,3.345844)
+2025-08-22 10:13:58,901 - INFO - Using cached coordinates for Ikeja, Lagos: (6.601838,3.3514863)
+2025-08-22 10:13:58,902 - INFO - Using cached coordinates for Obafemi Awolowo Way, Ikeja: (6.6076393,3.3500225)
+2025-08-22 10:13:58,902 - INFO - Using cached coordinates for 43 Adeleke Street, Off Allen Avenue, Ikeja: (6.6030149,3.3504838)
+2025-08-22 10:13:58,902 - INFO - Using cached coordinates for Ikeja Road, Ikeja, Lagos: (6.4594886,3.4179723)
+2025-08-22 10:13:58,902 - INFO - Using cached coordinates for Ikeja, Lagos: (6.601838,3.3514863)
+2025-08-22 10:13:59,211 - INFO - No match for "surgery" in ['emergency medical services']
+2025-08-22 10:13:59,227 - INFO - Hospital: Abey K Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:13:59,227 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-22 10:13:59,227 - INFO - Hospital: Amazing Saints Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:13:59,227 - INFO - No match for "surgery" in ['maternity services', 'primary care']
+2025-08-22 10:13:59,227 - INFO - Hospital: Bodet Medicare and Maternity, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:13:59,227 - INFO - No match for "surgery" in ['comprehensive eye care']
+2025-08-22 10:13:59,287 - INFO - Hospital: Cathem Eye Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-22 10:13:59,287 - INFO - No match for "surgery" in ['primary healthcare']
+2025-08-22 10:13:59,288 - INFO - Hospital: Our Lord Christ Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,289 - INFO - No match for "surgery" in ['emergency medical services']
+2025-08-22 10:13:59,336 - INFO - Hospital: Critical Rescue International, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,336 - INFO - No match for "surgery" in ['multispecialty medical center']
+2025-08-22 10:13:59,367 - INFO - Hospital: Deseret International Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,367 - INFO - No match for "surgery" in ['cardiac care', 'neurological services', 'advanced imaging']
+2025-08-22 10:13:59,367 - INFO - Hospital: Duro Soleye Hospitals, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,367 - INFO - No match for "surgery" in ['tertiary care', 'intensive care unit', 'specialist referrals']
+2025-08-22 10:13:59,367 - INFO - Hospital: Eko Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,367 - INFO - No match for "surgery" in ['corporate health services', 'executive medicine']
+2025-08-22 10:13:59,367 - INFO - Hospital: First Foundation Medical, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-22 10:13:59,367 - INFO - Partial match for "surgery" in ['general surgery', 'anesthesiology']
+2025-08-22 10:13:59,415 - INFO - Hospital: Framag Specialist Hospital, Service Match: 0.95, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['multispecialty care', 'advanced diagnostics']
+2025-08-22 10:13:59,415 - INFO - Hospital: Gordons Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['primary care', 'minor treatments']
+2025-08-22 10:13:59,415 - INFO - Hospital: Hand of God Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['general practice', 'chronic disease management']
+2025-08-22 10:13:59,415 - INFO - Hospital: Humana Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['public healthcare', 'emergency services']
+2025-08-22 10:13:59,415 - INFO - Hospital: Ikeja General Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['internal medicine', 'diagnostic services']
+2025-08-22 10:13:59,415 - INFO - Hospital: Kings Foundation Clinic, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['tertiary care', 'intensive care unit', 'specialist services']
+2025-08-22 10:13:59,415 - INFO - Hospital: Lagoon Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['teaching hospital', 'research', 'specialist care']
+2025-08-22 10:13:59,415 - INFO - Hospital: Lagos State University Teaching Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['general medicine', 'health checkups']
+2025-08-22 10:13:59,415 - INFO - Hospital: Life Fountain Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['general medicine', 'diagnostic services']
+2025-08-22 10:13:59,415 - INFO - Hospital: New Ikeja Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,415 - INFO - No match for "surgery" in ['chronic disease management', 'family medicine', 'counseling services']
+2025-08-22 10:13:59,415 - INFO - Hospital: Providence Christian Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,415 - INFO - Exact match for "surgery" in ['general medicine', 'pediatrics', 'surgery', 'diagnostics']
+2025-08-22 10:13:59,446 - INFO - Hospital: Reddington Hospital, Service Match: 1.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.850
+2025-08-22 10:13:59,446 - INFO - No match for "surgery" in ['pediatrics', 'family medicine', 'laboratory services']
+2025-08-22 10:13:59,480 - INFO - Hospital: Rophecca Medical Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:13:59,480 - INFO - No match for "surgery" in ['pediatric specialty care', 'vaccinations', 'child development']
+2025-08-22 10:13:59,480 - INFO - Hospital: Shepherd Medical Centre (For Children), Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,480 - INFO - Partial match for "surgery" in ['general surgery', 'obstetrics', 'laboratory services']
+2025-08-22 10:13:59,502 - INFO - Hospital: Skimar Hospital, Service Match: 0.95, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.461
+2025-08-22 10:13:59,502 - INFO - No match for "surgery" in ['comprehensive tertiary care', 'icu', 'specialist services']
+2025-08-22 10:13:59,503 - INFO - Hospital: St. Ives Hospitals, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,503 - INFO - Partial match for "surgery" in ['general medicine', 'minor surgery']
+2025-08-22 10:13:59,503 - INFO - Hospital: St. Thomas Hospital, Service Match: 0.95, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.461
+2025-08-22 10:13:59,503 - INFO - No match for "surgery" in ['general medicine', 'minor procedures']
+2025-08-22 10:13:59,503 - INFO - Hospital: Syl Memorial Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.461
+2025-08-22 10:13:59,503 - INFO - No match for "surgery" in ['internal medicine', 'specialist consultations']
+2025-08-22 10:13:59,504 - INFO - Hospital: The Duke Medical, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-22 10:13:59,504 - INFO - No match for "surgery" in ['executive health', 'specialist medicine']
+2025-08-22 10:13:59,504 - INFO - Hospital: Towers Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 5.00, Score: 0.200
+2025-08-22 10:13:59,504 - INFO - Partial match for "surgery" in ['general practice', 'minor surgery']
+2025-08-22 10:13:59,523 - INFO - Hospital: Treasurehunt Hospital, Service Match: 0.95, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.850
+2025-08-22 10:13:59,523 - INFO - No match for "surgery" in ['comprehensive healthcare', 'diagnostics']
+2025-08-22 10:13:59,523 - INFO - Hospital: Triumph Medical Center, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-22 10:13:59,523 - INFO - No match for "surgery" in ['obstetrics', 'neonatal care']
+2025-08-22 10:13:59,523 - INFO - Hospital: Vincent Maternity, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,523 - INFO - No match for "surgery" in ['comprehensive healthcare']
+2025-08-22 10:13:59,523 - INFO - Hospital: White Chapel Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.156
+2025-08-22 10:13:59,523 - INFO - No match for "surgery" in ["women's health", 'gynecology']
+2025-08-22 10:13:59,523 - INFO - Hospital: Zoe Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.200
+2025-08-22 10:13:59,523 - INFO - No match for "surgery" in ['charity healthcare', 'primary medicine']
+2025-08-22 10:13:59,523 - INFO - Hospital: Hope Foundation Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,523 - INFO - No match for "surgery" in ['general practice', 'chronic care']
+2025-08-22 10:13:59,523 - INFO - Hospital: Living Hope Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.200
+2025-08-22 10:13:59,523 - INFO - Recommendations saved to recommended_hospitals.csv
+2025-08-22 10:14:57,394 - INFO - Loading dataset Lagos_hospital.csv
+2025-08-22 10:14:57,409 - INFO - User city extracted: ikorodu
+2025-08-22 10:14:57,425 - INFO - Unique hospital cities: ['lagos island' 'gbagada' 'surulere' 'iju' 'idimu' 'ikeja' 'ikoyi' 'ipaja'
+ 'bariga' 'jibowu' 'appa' 'ojo' 'ajangbadi' 'ijesatedo' 'victoria island'
+ 'ifako-ijaiye' 'apapa' 'ikorodu' 'unknown' 'lagos airport road' 'badagry'
+ 'ilupeju' 'yaba' 'agege' 'egbe' 'ogba' 'ajah' 'off alake' 'mushin'
+ 'okomalam' 'onipanu' 'akowonjo' 'egbeda' 'ketu' 'fagba' 'akoka'
+ 'mafoluku-oshodi' 'ebute metta' 'iba' 'festac town' 'agbado' 'shogunle'
+ 'obalende' 'okota' 'lekki' 'isolo' 'idi-araba' 'igbobi' 'oshodi-isolo'
+ 'alagbado' 'epe' 'shomolu' 'lagos mainland']
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for Ikorodu: (6.6194131,3.5104537)
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for 3/4 Bamimosu Street, Ebute, Ikorodu: (6.603073299999999,3.494661)
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for Ikorodu: (6.6194131,3.5104537)
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for 26 Olaide Village, Ikorodu: (6.6194131,3.5104537)
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for 9 Muniratu Aleje Street, Ikorodu: (6.6311227,3.5198411)
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for Ikorodu Road: (6.5971823,3.3859445)
+2025-08-22 10:14:57,461 - INFO - Using cached coordinates for Ikorodu, Lagos: (6.622841699999999,3.5704942)
+2025-08-22 10:14:57,461 - WARNING - Cached coordinates for 'T.O.S. Benson Road, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:14:58,377 - WARNING - Cached coordinates for '191 Lagos Road, Before Agric Bus Stop, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:14:59,688 - WARNING - Cached coordinates for '59 Lagos Road, Newgate Bus Stop, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:00,598 - WARNING - Cached coordinates for '1 Onafowokan Street, Opposite Mejabot Filling Station, Owutu, Agric, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:01,373 - WARNING - Cached coordinates for '1 Shamsideen Jaiyesimi Street, Aga, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:02,923 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)")': /search?q=1+Shamsideen+Jaiyesimi+Street%2C+Aga%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1
+2025-08-22 10:15:03,932 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001742E663680>, 'Connection to nominatim.openstreetmap.org timed out. (connect timeout=1)')': /search?q=1+Shamsideen+Jaiyesimi+Street%2C+Aga%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1
+2025-08-22 10:15:04,948 - ERROR - Geocoding error for '1 Shamsideen Jaiyesimi Street, Aga, Ikorodu, Lagos, Nigeria': HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=1+Shamsideen+Jaiyesimi+Street%2C+Aga%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001742E2794F0>, 'Connection to nominatim.openstreetmap.org timed out. (connect timeout=1)'))
+2025-08-22 10:15:04,948 - WARNING - Cached coordinates for '56 Itokin Road, Otun Bus Stop, Lucky Fibre, Itamope, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:06,039 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001742E660C50>, 'Connection to nominatim.openstreetmap.org timed out. (connect timeout=1)')': /search?q=56+Itokin+Road%2C+Otun+Bus+Stop%2C+Lucky+Fibre%2C+Itamope%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1
+2025-08-22 10:15:07,051 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001742E6614C0>, 'Connection to nominatim.openstreetmap.org timed out. (connect timeout=1)')': /search?q=56+Itokin+Road%2C+Otun+Bus+Stop%2C+Lucky+Fibre%2C+Itamope%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1
+2025-08-22 10:15:08,065 - ERROR - Geocoding error for '56 Itokin Road, Otun Bus Stop, Lucky Fibre, Itamope, Ikorodu, Lagos, Nigeria': HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=56+Itokin+Road%2C+Otun+Bus+Stop%2C+Lucky+Fibre%2C+Itamope%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001742E660500>, 'Connection to nominatim.openstreetmap.org timed out. (connect timeout=1)'))
+2025-08-22 10:15:08,065 - WARNING - Cached coordinates for 'Plot 12 Biovic Boulevard, Jajo Estate, Off Mowo-Nla Road, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:09,312 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)")': /search?q=Plot+12+Biovic+Boulevard%2C+Jajo+Estate%2C+Off+Mowo-Nla+Road%2C+Ikorodu%2C+Lagos%2C+Nigeria%2C+Lagos%2C+Nigeria&format=json&limit=1
+2025-08-22 10:15:10,221 - WARNING - Cached coordinates for '6 Ola Balogun Street, Behind LG Primary School, Igbe-Laara, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:11,131 - WARNING - Cached coordinates for 'JGJC+6G, Ikorodu-Epe Rd, Akasolori, Ikorodu 104101, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:11,905 - WARNING - Cached coordinates for '2/4 Bamimosu Street, Ebutte, Ipakodo, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:13,207 - WARNING - Cached coordinates for '50 Eluku Street, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:14,388 - WARNING - Cached coordinates for '5 Anibaba Street, Off Ireshe Road, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:15,334 - WARNING - Cached coordinates for 'Simco Ummekwu Street, Off Isawo Road, Agric, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:16,250 - WARNING - Cached coordinates for '5 Segun Ishola Street, Owutu, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:17,357 - WARNING - Cached coordinates for '3-5 Adeyeri Owuyo Street, Behind Zenith Bank, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:18,193 - WARNING - Cached coordinates for '5 Eunice Iyayi Street, Odogunyan, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:19,405 - WARNING - Cached coordinates for 'Kilometers 3 Ikorodu-Shagamu Express Way, Ita-Oluwo, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:20,448 - WARNING - Cached coordinates for 'Degolu Road, Igbogbo, 234001, Ikorodu, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:21,175 - WARNING - Cached coordinates for '2nd Avenue, Poboyejo Estate, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:22,286 - WARNING - Cached coordinates for '3 Fatima Bintu Street, Sholebo Estate, Off Ebute-Igbobo Road, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:23,236 - WARNING - Cached coordinates for '3 Omo Oba Shibajo Way, Agbede Transformer, Ita Oluwo Road, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:24,179 - WARNING - Cached coordinates for '120 Lagos Road, Haruna, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:25,525 - WARNING - Cached coordinates for '77 Odonla Road, Odogunyan, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:26,447 - WARNING - Cached coordinates for '180 Awolowo Way, Itamaga, Ikorodu, Lagos, Nigeria' are invalid. Re-geocoding.
+2025-08-22 10:15:27,599 - INFO - Exact match for "surgery" in ['surgical services', 'pediatric care']
+2025-08-22 10:15:27,630 - INFO - Hospital: Aruna Ogun Memorial Specialist Hospital, Service Match: 1.00, Location Match: 1.00, Cost: 2.00, Quality: 4.00, Score: 0.461
+2025-08-22 10:15:27,630 - INFO - No match for "surgery" in ['general medical practice']
+2025-08-22 10:15:27,803 - INFO - Hospital: Baylight Watch Hospitals Ltd, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,803 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,803 - INFO - Hospital: Demola Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,803 - INFO - No match for "surgery" in ['general medicine', 'basic procedures']
+2025-08-22 10:15:27,803 - INFO - Hospital: Ikorodu Clinic, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,803 - INFO - No match for "surgery" in ['primary healthcare', 'basic treatments']
+2025-08-22 10:15:27,803 - INFO - Hospital: Joe Ben Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,803 - INFO - Exact match for "surgery" in ['multispecialty care', 'surgical services']
+2025-08-22 10:15:27,834 - INFO - Hospital: Toun Memorial Specialist Hospital, Service Match: 1.00, Location Match: 1.00, Cost: 3.00, Quality: 4.00, Score: 0.850
+2025-08-22 10:15:27,834 - INFO - No match for "surgery" in ['emergency', 'maternity', 'pediatrics', 'cardiology', 'orthopedics', 'radiology', 'blood bank', 'dental']
+2025-08-22 10:15:27,834 - INFO - Hospital: General Hospital Ikorodu, Service Match: 0.00, Location Match: 1.00, Cost: 1.00, Quality: 3.00, Score: 0.850
+2025-08-22 10:15:27,834 - INFO - No match for "surgery" in ['general medicine', 'specialized care', 'laboratory', 'pharmacy']
+2025-08-22 10:15:27,850 - INFO - Hospital: Oak Hospitals, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: Newgate Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: Holyfill Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: Katis Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: Kings Court Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: Lifesource Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: COSAN Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,850 - INFO - Hospital: Landmark Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,850 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Aruna Ogun Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine', 'pediatrics', 'dental', 'laboratory']
+2025-08-22 10:15:27,866 - INFO - Hospital: Ajayi Medical Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Amodu Adesola Memorial Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine', 'diagnostic']
+2025-08-22 10:15:27,866 - INFO - Hospital: Bidems Victory Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Bolakunmi Idowu Memorial Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine', 'maternity']
+2025-08-22 10:15:27,866 - INFO - Hospital: Jobi Clinic & Maternity Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: M-Cred Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: The Real Hope Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Baytu-Seha Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Dasochris Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: St Everest Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine', 'maternity']
+2025-08-22 10:15:27,866 - INFO - Hospital: Prince of Peace Hospital & Maternity Centre, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Ire Anu Hospitals, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: Great Foundation Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - No match for "surgery" in ['general medicine']
+2025-08-22 10:15:27,866 - INFO - Hospital: De-Lakeland Imperial Hospital, Service Match: 0.00, Location Match: 1.00, Cost: 2.00, Quality: 3.00, Score: 0.000
+2025-08-22 10:15:27,866 - INFO - Recommendations saved to recommended_hospitals.csv

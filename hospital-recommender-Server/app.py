@@ -115,13 +115,13 @@ async def get_recommendations(request: RecommendationRequest):
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Path to Vite's dist folder
-FRONTEND_DIST = os.path.join(BASE_DIR, "..", "Hopsital Recommender-Client", "dist")
+FRONTEND_DIST = os.path.join(BASE_DIR, "..", "Hopsital-recommender-Client", "dist")
 
 # Mount Vite build output if it exists
 if os.path.exists(FRONTEND_DIST):
-    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="Hospital Recommender-Client")
+    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="Hospital-recommender-Client")
 else:
-    print("Vite dist folder not found. Did you run `npm run build` inside Hospital Recommender-Client?")
+    print("Vite dist folder not found. Did you run `npm run build` inside Hospital-recommender-Client?")
 
 if __name__ == "__main__":
     import uvicorn
