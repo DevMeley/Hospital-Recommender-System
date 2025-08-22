@@ -1,4 +1,4 @@
 Name,Full Address,Services,Cost Level,Quality Score,User Rating,City,Location_Match,Coordinates,Recommendation_Score,Route_Distance,Route_Duration,Route_Instructions
-Alheri Hospital,Ojodu,"Pediatric Medicine, General Surgery",Medium,3,3.8,ojo,1.0,"(6.637690699999999, 3.3558525)",0.85,6.6 km,0h 13m,Estimated driving route
-Solid Rock Hospital,"6 Akinsanya Street, Off Ogunnusi Road, Ojodu","General Medicine, Pediatrics, Minor Surgery",Medium,3,3.8,ojo,1.0,"(6.6420773, 3.3632993)",0.85,6.9 km,0h 13m,Estimated driving route
-Royan Hospital,"72 Aina Street, Ojodu, Ikeja, Lagos","Maternity Services, Pediatric Care, General Medicine",Medium,4,4.0,ojo,1.0,"(6.6443026, 3.3642001)",0.1555555555555555,7.1 km,0h 14m,Estimated driving route
+Treasurehunt Hospital,"8 Abraham Road, Ikeja, Lagos","General Practice, Minor Surgery",Medium,3,3.7,ikeja,1.0,"(6.441154399999999, 3.3689462)",0.85,17.9 km,0h 35m,Estimated driving route
+Framag Specialist Hospital,"Opebi Road, Ikeja","General Surgery, Anesthesiology",High,4,4.1,ikeja,1.0,"(6.5897006, 3.361005)",0.8498817784631205,1.7 km,0h 3m,Estimated driving route
+Reddington Hospital,"39 Issac John Street, GRA, Ikeja, Lagos","General Medicine, Pediatrics, Surgery, Diagnostics",High,5,4.6,ikeja,1.0,"(6.583444, 3.3571321)",0.8496434298923643,2.1 km,0h 4m,Estimated driving route

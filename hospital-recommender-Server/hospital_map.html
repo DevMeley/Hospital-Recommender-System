@@ -3,13 +3,21 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
@@ -17,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_96d2199e14b6e761daf44d5f5587a576 {
+                #map_0534508e67b716f0bd8940623d36ed6c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -26,51 +34,25 @@
                 }
                 .leaflet-container { font-size: 1rem; }
             </style>
-
-            <style>html, body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            </style>
-
-            <style>#map {
-                position:absolute;
-                top:0;
-                bottom:0;
-                right:0;
-                left:0;
-                }
-            </style>
-
-            <script>
-                L_NO_TOUCH = false;
-                L_DISABLE_3D = false;
-            </script>
-
         
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_96d2199e14b6e761daf44d5f5587a576" ></div>
+            <div class="folium-map" id="map_0534508e67b716f0bd8940623d36ed6c" ></div>
         
 </body>
 <script>
     
     
-            var map_96d2199e14b6e761daf44d5f5587a576 = L.map(
-                "map_96d2199e14b6e761daf44d5f5587a576",
+            var map_0534508e67b716f0bd8940623d36ed6c = L.map(
+                "map_0534508e67b716f0bd8940623d36ed6c",
                 {
-                    center: [6.637690699999999, 3.3558525],
+                    center: [6.441154399999999, 3.3689462],
                     crs: L.CRS.EPSG3857,
-                    ...{
-  "zoom": 12,
-  "zoomControl": true,
-  "preferCanvas": false,
-}
-
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
                 }
             );
 
@@ -78,138 +60,91 @@
 
         
     
-            var tile_layer_5627fada1eae107908bb1717c5792370 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
+            var tile_layer_46c67934d028a9445065a5b07e2794e2 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0534508e67b716f0bd8940623d36ed6c);
+        
+    
+            var marker_37559570f0980390d24d877f06c910d3 = L.marker(
+                [6.441154399999999, 3.3689462],
+                {}
+            ).addTo(map_0534508e67b716f0bd8940623d36ed6c);
+        
+    
+            var icon_33300fa8eb04707d0b457197ef48c898 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_37559570f0980390d24d877f06c910d3.setIcon(icon_33300fa8eb04707d0b457197ef48c898);
         
     
-            tile_layer_5627fada1eae107908bb1717c5792370.addTo(map_96d2199e14b6e761daf44d5f5587a576);
-        
-    
-            var marker_da7f91fb70ac78f2465ff1f37da2713d = L.marker(
-                [6.637690699999999, 3.3558525],
-                {
-}
-            ).addTo(map_96d2199e14b6e761daf44d5f5587a576);
-        
-    
-            var icon_5dbce444aa1aca936debef29beeff6b9 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "hospital",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_3e13638dd988462b1dc19342153bcaee = L.popup({
-  "maxWidth": "100%",
-});
+        var popup_d8c69a452340352552db547c827f928d = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_662fa3149ba1f941dc7cccdd0ca28694 = $(`<div id="html_662fa3149ba1f941dc7cccdd0ca28694" style="width: 100.0%; height: 100.0%;">Name: Alheri Hospital<br>Score: 0.85</div>`)[0];
-                popup_3e13638dd988462b1dc19342153bcaee.setContent(html_662fa3149ba1f941dc7cccdd0ca28694);
+                var html_7cdcb9a3baf377737e61f92a8d142644 = $(`<div id="html_7cdcb9a3baf377737e61f92a8d142644" style="width: 100.0%; height: 100.0%;">Name: Treasurehunt Hospital<br>Score: 0.85</div>`)[0];
+                popup_d8c69a452340352552db547c827f928d.setContent(html_7cdcb9a3baf377737e61f92a8d142644);
             
         
 
-        marker_da7f91fb70ac78f2465ff1f37da2713d.bindPopup(popup_3e13638dd988462b1dc19342153bcaee)
+        marker_37559570f0980390d24d877f06c910d3.bindPopup(popup_d8c69a452340352552db547c827f928d)
         ;
 
         
     
     
-                marker_da7f91fb70ac78f2465ff1f37da2713d.setIcon(icon_5dbce444aa1aca936debef29beeff6b9);
-            
-    
-            var marker_c0bad506ebd727a6676321a1007970d5 = L.marker(
-                [6.6420773, 3.3632993],
-                {
-}
-            ).addTo(map_96d2199e14b6e761daf44d5f5587a576);
+            var marker_e56bb41dbfbe3ebe26690d85222a2ba8 = L.marker(
+                [6.5897006, 3.361005],
+                {}
+            ).addTo(map_0534508e67b716f0bd8940623d36ed6c);
         
     
-            var icon_804e60faeb5861ce8085202e8ecfec5e = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "hospital",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
+            var icon_28c5574129c9a124da1a90f5485571d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_e56bb41dbfbe3ebe26690d85222a2ba8.setIcon(icon_28c5574129c9a124da1a90f5485571d8);
         
     
-        var popup_7fefdcf6c12dade22713bf4f61fc085a = L.popup({
-  "maxWidth": "100%",
-});
+        var popup_33e4f06e6a570ba697da50c767d66ea4 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_1b61d77f35a68af58c6de2f7ca36c80f = $(`<div id="html_1b61d77f35a68af58c6de2f7ca36c80f" style="width: 100.0%; height: 100.0%;">Name: Solid Rock Hospital<br>Score: 0.85</div>`)[0];
-                popup_7fefdcf6c12dade22713bf4f61fc085a.setContent(html_1b61d77f35a68af58c6de2f7ca36c80f);
+                var html_0f3241732e21b4c71cd39c1e6c6c10e4 = $(`<div id="html_0f3241732e21b4c71cd39c1e6c6c10e4" style="width: 100.0%; height: 100.0%;">Name: Framag Specialist Hospital<br>Score: 0.85</div>`)[0];
+                popup_33e4f06e6a570ba697da50c767d66ea4.setContent(html_0f3241732e21b4c71cd39c1e6c6c10e4);
             
         
 
-        marker_c0bad506ebd727a6676321a1007970d5.bindPopup(popup_7fefdcf6c12dade22713bf4f61fc085a)
+        marker_e56bb41dbfbe3ebe26690d85222a2ba8.bindPopup(popup_33e4f06e6a570ba697da50c767d66ea4)
         ;
 
         
     
     
-                marker_c0bad506ebd727a6676321a1007970d5.setIcon(icon_804e60faeb5861ce8085202e8ecfec5e);
-            
-    
-            var marker_a1e91b2fbb096e7c3d71cc86f097138f = L.marker(
-                [6.6443026, 3.3642001],
-                {
-}
-            ).addTo(map_96d2199e14b6e761daf44d5f5587a576);
+            var marker_a56b9a55c420e94d798ddf903e578130 = L.marker(
+                [6.583444, 3.3571321],
+                {}
+            ).addTo(map_0534508e67b716f0bd8940623d36ed6c);
         
     
-            var icon_011987dd9726a49f9c3b1f9867d9a438 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "hospital",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
+            var icon_c2092f66d47c218ccd552e837b5dd496 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_a56b9a55c420e94d798ddf903e578130.setIcon(icon_c2092f66d47c218ccd552e837b5dd496);
         
     
-        var popup_ce64c469bf029273d2256aa99947cd53 = L.popup({
-  "maxWidth": "100%",
-});
+        var popup_d64ca70744bfe888437986d46b47b25f = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_03389512a76d2b291d6aa0bcf2daf27c = $(`<div id="html_03389512a76d2b291d6aa0bcf2daf27c" style="width: 100.0%; height: 100.0%;">Name: Royan Hospital<br>Score: 0.16</div>`)[0];
-                popup_ce64c469bf029273d2256aa99947cd53.setContent(html_03389512a76d2b291d6aa0bcf2daf27c);
+                var html_8bf2995d4f3f87c87788186fdf9e8534 = $(`<div id="html_8bf2995d4f3f87c87788186fdf9e8534" style="width: 100.0%; height: 100.0%;">Name: Reddington Hospital<br>Score: 0.85</div>`)[0];
+                popup_d64ca70744bfe888437986d46b47b25f.setContent(html_8bf2995d4f3f87c87788186fdf9e8534);
             
         
 
-        marker_a1e91b2fbb096e7c3d71cc86f097138f.bindPopup(popup_ce64c469bf029273d2256aa99947cd53)
+        marker_a56b9a55c420e94d798ddf903e578130.bindPopup(popup_d64ca70744bfe888437986d46b47b25f)
         ;
 
         
     
-    
-                marker_a1e91b2fbb096e7c3d71cc86f097138f.setIcon(icon_011987dd9726a49f9c3b1f9867d9a438);
-            
 </script>
 </html>

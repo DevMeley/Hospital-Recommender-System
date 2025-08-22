@@ -27,7 +27,7 @@ function App() {
 
     try {
       const res = await fetch(
-        "/api/recommend",
+        "http://localhost:5000/api/recommend",
         {
           method: "POST",
           body: JSON.stringify(formData),
