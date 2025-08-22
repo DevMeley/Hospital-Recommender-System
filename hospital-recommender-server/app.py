@@ -112,16 +112,29 @@ async def get_recommendations(request: RecommendationRequest):
     
 
 # === SERVE FRONTEND BUILD ===
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Path to Vite's dist folder
-FRONTEND_DIST = os.path.join(BASE_DIR, "..", "hopsital-recommender-client", "dist")
+# # Path to Vite's dist folder
+# FRONTEND_DIST = os.path.join(BASE_DIR, "..", "hopsital-recommender-client", "dist")
 
-# Mount Vite build output if it exists
-if os.path.exists(FRONTEND_DIST):
-    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="hospital-recommender-client")
-else:
-    print("Vite dist folder not found. Did you run `npm run build` inside hospital-recommender-client?")
+# # Mount Vite build output if it exists
+# if os.path.exists(FRONTEND_DIST):
+#     app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="hospital-recommender-client")
+    
+# else:
+#     print("Vite dist folder not found. Did you run `npm run build` inside hospital-recommender-client?")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# API routes example
+@app.get("/api/hello")
+def hello():
+    return {"msg": "Hello from FastAPI!"}
+
+# Catch-all route -> serve React index.html
+@app.get("/{full_path:path}")
+async def serve_react_app(full_path: str):
+    index_file = os.path.join("static", "index.html")
+    return FileResponse(index_file)
 
 if __name__ == "__main__":
     import uvicorn
