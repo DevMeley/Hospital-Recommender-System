@@ -7,6 +7,6 @@ export default defineConfig({
   publicDir: 'public', 
   build: {
     assetsDir: 'assets'  
-  
-}
+},
+  base: "/static/",
 })

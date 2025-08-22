@@ -129,6 +129,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/api/hello")
 def hello():
     return {"msg": "Hello from FastAPI!"}
+@app.get("/")
+async def serve_react_index():
+    return FileResponse(os.path.join("static", "index.html"))
+
 
 # Catch-all route -> serve React index.html
 @app.get("/{full_path:path}")
